@@ -9,7 +9,7 @@ class Game : public Serializable<unsigned int> {
 
 	void passTurn();
 	void serialize(std::ostream& out) const override;
-
+	void deserialize(std::istream& in) override;
 public:
 	Game(const Player& p1, const Player& p2);
 	Game(const Player& p1, const Player& p2, bool turn);

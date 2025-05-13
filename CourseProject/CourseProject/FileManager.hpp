@@ -2,46 +2,46 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <list>
 #include "Serializable.hpp"
 
-template <class IdType>
+
+//T has to be derived from Serializable<IdType>
+template <class T, class IdType>
 class FileManager {
-	using Serializable = Serializable<IdType>;
-	std::vector<Serializable*> set;
+protected:
+	std::vector<T*> data;
 	std::ofstream fout;
 	std::ifstream fin;
 	std::string fileName;
-protected:
-	bool containsId(const Serializable& element) const;
-	int find(const Serializable& element) const;
+	bool containsId(const T& element) const;
+	int find(const T& element) const;
 public:
 	FileManager(const char* fileName);
 
 	FileManager(const FileManager&) = delete;
 	FileManager& operator=(const FileManager&) = delete;
 
-	virtual void save();
-	virtual void add(const Serializable& element);
-	virtual Serializable* read(IdType id) = 0;
-	virtual const Serializable* read(IdType id) const = 0;
-	virtual const std::vector<Serializable*>& readAll() = 0;
-	virtual void update(const Serializable& element) = 0;
-	virtual void remove(const Serializable& element);
+	void save();
+	void add(const T& element);
+	T& read(IdType id);
+	const T& read(IdType id) const;
+	const std::vector<T*>& readAll() const;
+	void update(const T& element);
+	void remove(const T& element);
 
-	virtual ~FileManager();
+	~FileManager();
 };
 
 
-template<class IdType>
-void FileManager<IdType>::remove(const Serializable& element)
+template<class T, class IdType>
+void FileManager<T, IdType>::remove(const T& element) 
 {
 	int index = find(element);
 	if (index != -1) {
-		std::swap(set[index], set[set.size - 1]);
-		delete set[set.size - 1];
-		set[set.size - 1] = nullptr;
-		set.pop_back();
+		std::swap(data[index], data[data.size() - 1]);
+		delete data[data.size() - 1];
+		data[data.size() - 1] = nullptr;
+		data.pop_back();
 	}
 	else {
 		throw "element does not exist";
@@ -49,49 +49,89 @@ void FileManager<IdType>::remove(const Serializable& element)
 
 }
 
-template<class IdType>
-FileManager<IdType>::~FileManager()
+template<class T, class IdType>
+FileManager<T, IdType>::~FileManager()
 {
-	for (Serializable* el : set) { delete el; }
+	for (T* el : data) { delete el; }
 }
 
-template<class IdType>
-bool FileManager<IdType>::containsId(const Serializable& element) const
+template<class T, class IdType>
+bool FileManager<T, IdType>::containsId(const T& element) const
 {
-	for (Serializable* el : set) {
+	for (T* el : data) {
 		if (el->id == element.id) return true;
 	}
 	return false;
 }
 
-template<class IdType>
-int FileManager<IdType>::find(const Serializable& element) const
+template<class T, class IdType>
+int FileManager<T, IdType>::find(const T& element) const
 {
-	for (int i = 0; i < set.size; i++) {
-		if (element.id == set[i].id) return i;
+	for (int i = 0; i < data.size(); i++) {
+		if (element.id == data[i]->id) return i;
 	}
 	return -1;
 }
 
-template<class IdType>
-FileManager<IdType>::FileManager(const char* fileName) : fileName(fileName)
+template<class T, class IdType>
+FileManager<T, IdType>::FileManager(const char* fileName) : fileName(fileName)
 {
+	fin.open(fileName);
+	fin.ignore();
+	while (fin.good()) {
+		data.push_back(new T(fin));
+	}
+	fin.close();
 }
 
-template<class IdType>
-void FileManager<IdType>::save()
+template<class T, class IdType>
+void FileManager<T, IdType>::save()
 {
 	fout.open(fileName, std::ios::trunc | std::ios::out);
-	for (Serializable* el : set) { el->serialize(fout); }
+	for (T* el : data) { el->serialize(fout); }
+	fout.close();
 }
 
-template<class IdType>
-void FileManager<IdType>::add(const Serializable& element)
+template<class T, class IdType>
+void FileManager<T, IdType>::add(const T& element)
 {
-	if (!contains(element)) {
-		set.push_back(element);
+	if (!containsId(element)) {
+		data.push_back(element.clone());
 	}
 	else {
 		throw "id already exists";
 	}
+}
+
+template<class T, class IdType>
+T& FileManager<T, IdType>::read(IdType id)
+{
+	for (T* el : data) {
+		if (el->getId() == id) return *el;
+	}
+	throw "invalid id";
+}
+
+template<class T, class IdType>
+const T& FileManager<T, IdType>::read(IdType id) const
+{
+	for (T* el : data) {
+		if (el->getId() == id) return *el;
+	}
+	throw "invalid id";
+}
+
+template<class T, class IdType>
+const std::vector<T*>& FileManager<T, IdType>::readAll() const
+{
+	return data;
+}
+
+template<class T, class IdType>
+void FileManager<T, IdType>::update(const T& element)
+{
+	int index = find(element);
+	if (index == -1) throw "invalid id";
+	delete data[index];
+	data[index] = element.clone();
 }

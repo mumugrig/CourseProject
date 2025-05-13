@@ -6,6 +6,7 @@ class Player : public Serializable<unsigned int> {
 	unsigned int highScore;
 
 	void serialize(std::ostream& out) const override;
+	void deserialize(std::istream& in) override;
 public:
 	Player(unsigned int id, const std::string& username, unsigned int highScore);
 	Player(const std::string& username);
