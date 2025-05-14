@@ -1,4 +1,2 @@
 ﻿  test.cpp
-C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\test.cpp(11,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\test.cpp(13,30): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
   CourseProject.vcxproj -> C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\x64\Debug\CourseProject.exe

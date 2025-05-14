@@ -2,9 +2,9 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 #include "FileManager.hpp"
-
-
-class TestClass : public Serializable<int> {
+#include "Player.hpp"
+#include "Board.hpp"
+class TestClass : public Storable<int> {
 	
 public:
 	std::string str;
@@ -19,10 +19,14 @@ public:
 		in >> id >> str;
 	}
 
-	TestClass(int id, const std::string& str) : Serializable(id), str(str) {}
-	TestClass(std::ifstream& in) : Serializable(0) { deserialize(in); }
+	TestClass(int id, const std::string& str) : Storable(id), str(str) {}
+	TestClass(std::ifstream& in) : Storable(0) { deserialize(in); }
 	TestClass* clone() const override {
 		return new TestClass(*this);
+	}
+
+	TestClass* cloneWithId(int id) const override {
+		return new TestClass(id, this->str);
 	}
 };
 
@@ -39,6 +43,8 @@ TEST_CASE("TestClass serialize and deserialize") {
 	CHECK(a.str == b.str);
 }
 TEST_CASE("TestManager") {
+	std::ofstream out("test.txt");
+	out.close();
 	FileManager<TestClass, int> manager("test.txt");
 	CHECK(manager.readAll().empty());
 	manager.add(TestClass(1, "a"));
@@ -65,8 +71,25 @@ TEST_CASE("TestManager") {
 	CHECK_THROWS(manager.read(-1));
 	manager.remove(a);
 	CHECK_THROWS(manager.read(a.getId()));
-	std::ofstream out("test.txt");
-	out.close();
-}
+	in.close();
 
+}
+TEST_CASE("FileManager auto_increment for int") {
+	std::ofstream out("player.txt");
+	out.close();
+
+	FileManager<Player, unsigned int> playerManager("player.txt", 1);
+	playerManager.add(Player("player1"));
+	CHECK_EQ(playerManager.readAll()[0]->getId(), 1);
+	playerManager.add(Player("player2"));
+	CHECK_EQ(playerManager.readAll()[1]->getId(), 2);
+	CHECK_EQ(playerManager.read(2).getUsername(), "player2");
+}
+TEST_CASE("Board") {
+	Board b = Board();
+	b.setValue(0, 0, 6);
+	CHECK_EQ(b.score(), 6);
+	b.setValue(0, 1, 6);
+	CHECK_EQ(b.score(), 24);
+}
 

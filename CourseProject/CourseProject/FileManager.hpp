@@ -5,17 +5,18 @@
 #include "Serializable.hpp"
 
 
-//T has to be derived from Serializable<IdType>
+//T has to be derived from Storable<IdType>
 template <class T, class IdType>
 class FileManager {
-protected:
 	std::vector<T*> data;
-	std::ofstream fout;
-	std::ifstream fin;
 	std::string fileName;
+	bool auto_inc;
+	IdType* largestId = nullptr;
 	bool containsId(const T& element) const;
 	int find(const T& element) const;
+	virtual IdType auto_increment();
 public:
+	FileManager(const char* fileName , bool auto_inc);
 	FileManager(const char* fileName);
 
 	FileManager(const FileManager&) = delete;
@@ -52,6 +53,8 @@ void FileManager<T, IdType>::remove(const T& element)
 template<class T, class IdType>
 FileManager<T, IdType>::~FileManager()
 {
+	save();
+	delete largestId;
 	for (T* el : data) { delete el; }
 }
 
@@ -74,9 +77,23 @@ int FileManager<T, IdType>::find(const T& element) const
 }
 
 template<class T, class IdType>
-FileManager<T, IdType>::FileManager(const char* fileName) : fileName(fileName)
+IdType FileManager<T, IdType>::auto_increment()
 {
-	fin.open(fileName);
+	if (largestId == nullptr) {
+		largestId = new IdType(0);
+		for (T* el : data) {
+			if (el->getId() > *largestId) *largestId = el->getId();
+		}
+	}
+	++(*largestId);
+	return *largestId;
+}
+
+template<class T, class IdType>
+FileManager<T, IdType>::FileManager(const char* fileName, bool auto_inc) 
+	: fileName(fileName), auto_inc(auto_inc)
+{
+	std::ifstream fin(fileName);
 	fin.ignore();
 	while (fin.good()) {
 		data.push_back(new T(fin));
@@ -85,9 +102,21 @@ FileManager<T, IdType>::FileManager(const char* fileName) : fileName(fileName)
 }
 
 template<class T, class IdType>
+FileManager<T, IdType>::FileManager(const char* fileName) : fileName(fileName), auto_inc(false)
+{
+	std::ifstream fin(fileName);
+	fin.ignore();
+	while (fin.good()) {
+		data.push_back(new T(fin));
+	}
+	fin.close();
+}
+
+
+template<class T, class IdType>
 void FileManager<T, IdType>::save()
 {
-	fout.open(fileName, std::ios::trunc | std::ios::out);
+	std::ofstream fout(fileName, std::ios::trunc | std::ios::out);
 	for (T* el : data) { el->serialize(fout); }
 	fout.close();
 }
@@ -95,12 +124,18 @@ void FileManager<T, IdType>::save()
 template<class T, class IdType>
 void FileManager<T, IdType>::add(const T& element)
 {
-	if (!containsId(element)) {
-		data.push_back(element.clone());
+	if (auto_inc) {
+		data.push_back(element.cloneWithId(auto_increment()));
 	}
 	else {
-		throw "id already exists";
+		if (!containsId(element)) {
+			data.push_back(element.clone());
+		}
+		else {
+			throw "id already exists";
+		}
 	}
+	
 }
 
 template<class T, class IdType>

@@ -18,6 +18,15 @@
     <ClCompile Include="test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\libs\doctest.h">
@@ -29,10 +38,13 @@
     <ClInclude Include="Game.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerManager.hpp">
+    <ClInclude Include="FileManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FileManager.hpp">
+    <ClInclude Include="Storable.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Serializable.hpp">
