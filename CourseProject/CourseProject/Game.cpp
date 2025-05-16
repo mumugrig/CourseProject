@@ -3,6 +3,7 @@
 void Game::passTurn()
 {
     turn = !turn;
+    rollDie();
 }
 
 void Game::serialize(std::ostream& out) const
@@ -74,12 +75,14 @@ void Game::removeFromEnemyBoard(int column)
 Game::Game(Player& p1, Player& p2) : player1(p1), player2(p2), Storable(0), turn(0), dieNumber(0), rng(), score1(0), score2(0)
 {
     seedRandom();
+    rollDie();
 }
 
 Game::Game(unsigned int id, Player& p1,  Player& p2, const Board& board1, const Board& board2, bool turn) :
     player1(p1), player2(p2), board1(board1),board2(board2),turn(turn), Storable(id), dieNumber(0), rng(), score1(board1.score()), score2(board2.score())
 {
     seedRandom();
+    rollDie();
 }
 
 void Game::rollDie()
@@ -87,17 +90,17 @@ void Game::rollDie()
     dieNumber = pcg32_boundedrand_r(&rng, 6) + 1;
 }
 
-int Game::getDie()
+int Game::getDie() const
 {
     return dieNumber;
 }
 
-int Game::getPlayer1Score()
+int Game::getPlayer1Score() const
 {
     return score1;
 }
 
-int Game::getPlayer2Score()
+int Game::getPlayer2Score() const
 {
     return score2;
 }
@@ -114,20 +117,8 @@ void Game::place(int x, int y)
 
 }
 
-void Game::save() const
-{
 
-}
-
-void Game::save(const char* filename) const
-{
-}
-
-void Game::load(const char* filename)
-{
-}
-
-bool Game::gameEnded()
+bool Game::gameEnded() const
 {
     return board1.isFull() || board2.isFull();
 }

@@ -81,7 +81,7 @@ void Board::setValue(int x, int y, int value)
 		board[y][x] = value;
 	}
 	else {
-		throw "Board::setValue: invalid input";
+		throw "invalid position";
 	}
 }
 
@@ -90,6 +90,7 @@ void Board::clearValue(int x, int y)
 	if (inBounds(x, y)) {
 		board[y][x] = 0;
 	}
+	else throw "invalid position";
 }
 
 int Board::getValue(int x, int y) const

@@ -119,7 +119,7 @@ TEST_CASE("Game") {
 	Player p1("player1");
 	Player p2("player2");
 	Game game(p1, p2);
-	game.rollDie();
+
 	CHECK(game.getDie() <= 6 );
 	CHECK(game.getDie() >= 1);
 
@@ -127,4 +127,10 @@ TEST_CASE("Game") {
 	
 	CHECK(game.getPlayer1Score() >= 1);
 	CHECK(game.getPlayer1Score() <= 6);
+
+	game.place(1, 0);
+	CHECK(game.getPlayer2Score() >= 1);
+	CHECK(game.getPlayer2Score() <= 6);
+
+	CHECK_THROWS(game.place(0, 0));
 }

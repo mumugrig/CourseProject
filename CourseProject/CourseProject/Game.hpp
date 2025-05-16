@@ -30,16 +30,12 @@ public:
 
 	void rollDie();
 	
-	int getDie();
-	int getPlayer1Score();
-	int getPlayer2Score();
+	int getDie() const;
+	int getPlayer1Score() const;
+	int getPlayer2Score() const;
 
 	void place(int x, int y);
-	
-	void save() const;
-	void save(const char* filename) const;
-	void load(const char* filename);
 
-	bool gameEnded();
+	bool gameEnded() const;
 
 };
