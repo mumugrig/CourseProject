@@ -1,2 +1,108 @@
-﻿  test.cpp
-  CourseProject.vcxproj -> C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\x64\Debug\CourseProject.exe
+﻿  Game.cpp
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Serializable.hpp(8,1): warning C5204: 'Serializable': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1): warning C4820: 'Storable<unsigned int>': '4' bytes padding added after data member 'Storable<unsigned int>::id'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(6,46): message : see reference to class template instantiation 'Storable<unsigned int>' being compiled
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(27,1): warning C4820: 'Player': '4' bytes padding added after data member 'Player::highScore'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(21,1): warning C4820: 'Board': '4' bytes padding added after data member 'Board::board'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(21,1): warning C5204: 'Board': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(11,17): warning C4820: 'Game': '4' bytes padding added after data member 'Game::score1'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(15,6): warning C4820: 'Game': '3' bytes padding added after data member 'Game::turn'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(16,17): warning C4820: 'Game': '4' bytes padding added after data member 'Game::dieNumber'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(45,1): warning C4626: 'Game': assignment operator was implicitly defined as deleted
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(45,1): warning C5027: 'Game': move assignment operator was implicitly defined as deleted
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(37,48): warning C4365: 'argument': conversion from 'time_t' to 'uint64_t', signed/unsigned mismatch
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(45,38): warning C4458: declaration of 'id' hides class member
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(10,9): message : see declaration of 'Storable<unsigned int>::id'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(74,51): warning C5038: data member 'Game::player2' will be initialized after base class 'Storable<unsigned int>'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(74,100): warning C5038: data member 'Game::rng' will be initialized after data member 'Game::score1'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(80,18): warning C5038: data member 'Game::player2' will be initialized after data member 'Game::board1'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(80,61): warning C5038: data member 'Game::turn' will be initialized after base class 'Storable<unsigned int>'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(80,101): warning C5038: data member 'Game::rng' will be initialized after data member 'Game::score1'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(87,49): warning C4365: '=': conversion from 'uint32_t' to 'int', signed/unsigned mismatch
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(122,29): warning C4100: 'filename': unreferenced formal parameter
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(126,29): warning C4100: 'filename': unreferenced formal parameter
+  test.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\limits.h(70,5): warning C4668: '__STDC_WANT_SECURE_LIB__' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Serializable.hpp(8,1): warning C5204: 'Serializable': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1): warning C4820: 'Storable<unsigned int>': '4' bytes padding added after data member 'Storable<unsigned int>::id'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(6,46): message : see reference to class template instantiation 'Storable<unsigned int>' being compiled
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(27,1): warning C4820: 'Player': '4' bytes padding added after data member 'Player::highScore'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(21,1): warning C4820: 'Board': '4' bytes padding added after data member 'Board::board'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(21,1): warning C5204: 'Board': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(11,17): warning C4820: 'Game': '4' bytes padding added after data member 'Game::score1'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(15,6): warning C4820: 'Game': '3' bytes padding added after data member 'Game::turn'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(16,17): warning C4820: 'Game': '4' bytes padding added after data member 'Game::dieNumber'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(45,1): warning C4626: 'Game': assignment operator was implicitly defined as deleted
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(45,1): warning C5027: 'Game': move assignment operator was implicitly defined as deleted
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1): warning C4820: 'Storable<int>': '4' bytes padding added after data member 'Storable<int>::id'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\test.cpp(9,40): message : see reference to class template instantiation 'Storable<int>' being compiled
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\test.cpp(30,29): warning C4458: declaration of 'id' hides class member
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(10,9): message : see declaration of 'Storable<int>::id'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(35,1): warning C4820: 'FileManager<TestClass,int>': '7' bytes padding added after data member 'FileManager<TestClass,int>::auto_inc'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\test.cpp(51,38): message : see reference to class template instantiation 'FileManager<TestClass,int>' being compiled
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(34,3): warning C4265: 'FileManager<TestClass,int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(35,1): warning C4820: 'FileManager<Player,unsigned int>': '7' bytes padding added after data member 'FileManager<Player,unsigned int>::auto_inc'
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\test.cpp(84,50): message : see reference to class template instantiation 'FileManager<Player,unsigned int>' being compiled
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(34,3): warning C4265: 'FileManager<Player,unsigned int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(171,1): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(168,1): message : while compiling class template member function 'void FileManager<TestClass,int>::update(const T &)'
+          with
+          [
+              T=TestClass
+          ]
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\test.cpp(63,16): message : see reference to function template instantiation 'void FileManager<TestClass,int>::update(const T &)' being compiled
+          with
+          [
+              T=TestClass
+          ]
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\test.cpp(51,38): message : see reference to class template instantiation 'FileManager<TestClass,int>' being compiled
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(172,1): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(43,1): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(40,1): message : while compiling class template member function 'void FileManager<TestClass,int>::remove(const T &)'
+          with
+          [
+              T=TestClass
+          ]
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\test.cpp(75,16): message : see reference to function template instantiation 'void FileManager<TestClass,int>::remove(const T &)' being compiled
+          with
+          [
+              T=TestClass
+          ]
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(74,20): warning C4388: '<': signed/unsigned mismatch
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(73,1): message : while compiling class template member function 'int FileManager<TestClass,int>::find(const T &) const'
+          with
+          [
+              T=TestClass
+          ]
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(169,12): message : see reference to function template instantiation 'int FileManager<TestClass,int>::find(const T &) const' being compiled
+          with
+          [
+              T=TestClass
+          ]
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(82,1): message : while compiling class template member function 'IdType FileManager<TestClass,IdType>::auto_increment(void)'
+          with
+          [
+              IdType=int
+          ]
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(75): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
+  Generating Code...
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\test.cpp(109): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\test.cpp(107): message : index 'i' range checked by comparison on this line
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\test.cpp(109): message : feeds call on this line
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(75): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(74): message : index '' range checked by comparison on this line
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(75): message : feeds call on this line
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(68): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(66): message : index 'i' range checked by comparison on this line
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(68): message : feeds call on this line
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(67): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(66): message : index 'i' range checked by comparison on this line
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(67): message : feeds call on this line
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(61): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(59): message : index 'i' range checked by comparison on this line
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(61): message : feeds call on this line
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(60): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(59): message : index 'i' range checked by comparison on this line
+D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(60): message : feeds call on this line
+     Creating library D:\GitHubRepos\CourseProject\CourseProject\x64\Debug\CourseProject.lib and object D:\GitHubRepos\CourseProject\CourseProject\x64\Debug\CourseProject.exp
+  CourseProject.vcxproj -> D:\GitHubRepos\CourseProject\CourseProject\x64\Debug\CourseProject.exe

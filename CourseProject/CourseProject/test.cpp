@@ -1,9 +1,11 @@
 #include <iostream>
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include "Libraries/doctest.h"
 #include "FileManager.hpp"
 #include "Player.hpp"
 #include "Board.hpp"
+#include "Game.hpp"
+
 class TestClass : public Storable<int> {
 	
 public:
@@ -28,6 +30,7 @@ public:
 	TestClass* cloneWithId(int id) const override {
 		return new TestClass(id, this->str);
 	}
+	~TestClass() {};
 };
 
 
@@ -91,5 +94,37 @@ TEST_CASE("Board") {
 	CHECK_EQ(b.score(), 6);
 	b.setValue(0, 1, 6);
 	CHECK_EQ(b.score(), 24);
-}
+	b.setValue(0, 2, 6);
+	CHECK_EQ(b.score(), 54);
+	std::ofstream out("board.txt");
+	b.serialize(out);
+	out.close();
+	std::ifstream in("board.txt");
+	Board c = Board();
+	SUBCASE("Deserialization") {
+		c.deserialize(in);
+		in.close();
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				CHECK_EQ(b.getValue(i, j), c.getValue(i, j));
+			}
+		}
+	}
+	CHECK_THROWS(b.setValue(0, 1, 1));
+	CHECK_THROWS(b.setValue(0, -1, 1));
+	CHECK_THROWS(b.setValue(0, 1, 0));
 
+}
+TEST_CASE("Game") {
+	Player p1("player1");
+	Player p2("player2");
+	Game game(p1, p2);
+	game.rollDie();
+	CHECK(game.getDie() <= 6 );
+	CHECK(game.getDie() >= 1);
+
+	game.place(0,0);
+	
+	CHECK(game.getPlayer1Score() >= 1);
+	CHECK(game.getPlayer1Score() <= 6);
+}

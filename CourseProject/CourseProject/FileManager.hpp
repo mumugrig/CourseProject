@@ -6,12 +6,13 @@
 
 
 //T has to be derived from Storable<IdType>
+//default auto_incement works for numeric types only
 template <class T, class IdType>
 class FileManager {
 	std::vector<T*> data;
 	std::string fileName;
-	bool auto_inc;
 	IdType* largestId = nullptr;
+	bool auto_inc;
 	bool containsId(const T& element) const;
 	int find(const T& element) const;
 	virtual IdType auto_increment();

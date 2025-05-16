@@ -13,6 +13,7 @@ protected:
 	virtual Storable* cloneWithId(IdType id) const = 0;
 	template<class T, class U>
 	friend class FileManager;
+	virtual ~Storable() {}
 public:
 	
 	const IdType& getId() const { return id; };

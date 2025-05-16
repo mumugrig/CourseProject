@@ -5,9 +5,9 @@ bool Board::inBounds(int x, int y)
 	return x >= 0 && x < 3 && y >= 0 && y < 3;
 }
 
-int Board::columnScore(int column[])
+int Board::columnScore(int column[]) const
 {
-	int count = 0;
+	int count = 1;
 	int number = 0;
 	if (column[0] == column[1] || column[0] == column[2]) {
 		count++;
@@ -52,7 +52,7 @@ Board::Board(const int** matrix)
 	}
 }
 
-bool Board::isFull()
+bool Board::isFull() const
 {
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 3; j++) {
@@ -62,7 +62,7 @@ bool Board::isFull()
 	return true;
 }
 
-int Board::score()
+int Board::score() const
 {
 	int result = 0;
 	for (int i = 0; i < 3; i++) {
@@ -77,11 +77,18 @@ int Board::score()
 
 void Board::setValue(int x, int y, int value)
 {
-	if (value >= 0 && value <= 6 && inBounds(x, y) && notOccupied(x,y)) {
+	if (value >= 1 && value <= 6 && inBounds(x, y) && notOccupied(x,y)) {
 		board[y][x] = value;
 	}
 	else {
 		throw "Board::setValue: invalid input";
+	}
+}
+
+void Board::clearValue(int x, int y)
+{
+	if (inBounds(x, y)) {
+		board[y][x] = 0;
 	}
 }
 
@@ -93,7 +100,7 @@ int Board::getValue(int x, int y) const
 void Board::serialize(std::ostream& out) const
 {
 	for (int i = 0; i < 9; i++) {
-		out << board[i / 3][i % 3];
+		out << board[i / 3][i % 3] << ' ';
 	}
 	out << std::endl;
 }
