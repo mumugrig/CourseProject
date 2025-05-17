@@ -6,22 +6,6 @@ void Game::passTurn()
     rollDie();
 }
 
-void Game::serialize(std::ostream& out) const
-{
-    out << id << ' ' << player1.getId() << ' ';
-    board1.serialize(out);
-    out << player2.getId() << ' ';
-    board2.serialize(out);
-}
-
-void Game::deserialize(std::istream& in)
-{
-    unsigned int playerId;
-    in >> id >> playerId;
-    player1.deserialize(in);
-    in >> playerId;
-    player2.deserialize(in);
-}
 
 void Game::place(bool board, int x, int y)
 {
@@ -72,7 +56,7 @@ void Game::removeFromEnemyBoard(int column)
     }
 }
 
-Game::Game(Player& p1, Player& p2) : player1(p1), player2(p2), Storable(0), turn(0), dieNumber(0), rng(), score1(0), score2(0)
+Game::Game(Player& p1, Player& p2) : Storable(0),player1(p1), player2(p2), turn(0), dieNumber(0), rng(), score1(0), score2(0)
 {
     seedRandom();
     rollDie();

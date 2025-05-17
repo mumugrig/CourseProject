@@ -1,10 +1,10 @@
 #pragma once
 #include <iostream>
 #include "FileManager.hpp"
-
+#include "Serializable.hpp"
 
 template <class IdType>
-class Storable : public Serializable
+class Storable
 {
 protected:
 	IdType id;

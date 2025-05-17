@@ -33,6 +33,12 @@
     <ClCompile Include="libraries\pcg_basic.c">
       <Filter>Libraries</Filter>
     </ClCompile>
+    <ClCompile Include="PlayerManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.hpp">
@@ -58,6 +64,15 @@
     </ClInclude>
     <ClInclude Include="libraries\pcg_basic.h">
       <Filter>Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorUtility.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

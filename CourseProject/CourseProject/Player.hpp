@@ -14,13 +14,10 @@ class Player : public Storable<unsigned int> {
 public:
 	Player(unsigned int id, const std::string& username, unsigned int highScore);
 	Player(const std::string& username);
-	Player(std::ifstream& in);
 
 	const std::string& getUsername() const;
 	unsigned int getHighScore() const;
-
-	void serialize(std::ostream& out) const override;
-	void deserialize(std::istream& in) override;
+	void setHighScore(unsigned int highScore);
 
 	template<class T, class K>
 	friend class FileManager;

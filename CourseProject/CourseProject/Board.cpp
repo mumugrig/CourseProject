@@ -29,7 +29,7 @@ int Board::columnScore(int column[]) const
 	return result;
 }
 
-bool Board::notOccupied(int x, int y)
+bool Board::notOccupied(int x, int y) const
 {
 	return board[y][x] == 0;
 }

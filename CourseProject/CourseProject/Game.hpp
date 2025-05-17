@@ -11,12 +11,11 @@ class Game : public Storable<unsigned int> {
 	Player& player2;
 	Board board2;
 	int score2;
-	bool turn;
 	int dieNumber;
 	pcg32_random_t rng;
+	bool turn;
 	void passTurn();
-	void serialize(std::ostream& out) const override;
-	void deserialize(std::istream& in) override;
+	
 	void place(bool board, int x, int y);
 	void seedRandom();
 	Game* clone() const override;
@@ -38,4 +37,7 @@ public:
 
 	bool gameEnded() const;
 
+	template <class T, class K>
+	friend class FileManager;
+	friend class GameManager;
 };

@@ -2,19 +2,23 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include "Serializable.hpp"
-
 
 //T has to be derived from Storable<IdType>
 //default auto_incement works for numeric types only
 template <class T, class IdType>
 class FileManager {
+protected:
+	virtual void serialize(const T& element, std::ostream& out) = 0;
+	virtual T* deserialize(std::istream& in) = 0;
 	std::vector<T*> data;
 	std::string fileName;
 	IdType* largestId = nullptr;
 	bool auto_inc;
+	
 	bool containsId(const T& element) const;
 	int find(const T& element) const;
+
+	//returns next id that is not taken
 	virtual IdType auto_increment();
 public:
 	FileManager(const char* fileName , bool auto_inc);
@@ -23,8 +27,8 @@ public:
 	FileManager(const FileManager&) = delete;
 	FileManager& operator=(const FileManager&) = delete;
 
-	void save();
-	void add(const T& element);
+	virtual void save() = 0;
+	virtual void add(const T& element);
 	T& read(IdType id);
 	const T& read(IdType id) const;
 	const std::vector<T*>& readAll() const;
@@ -54,7 +58,6 @@ void FileManager<T, IdType>::remove(const T& element)
 template<class T, class IdType>
 FileManager<T, IdType>::~FileManager()
 {
-	save();
 	delete largestId;
 	for (T* el : data) { delete el; }
 }
@@ -94,33 +97,13 @@ template<class T, class IdType>
 FileManager<T, IdType>::FileManager(const char* fileName, bool auto_inc) 
 	: fileName(fileName), auto_inc(auto_inc)
 {
-	std::ifstream fin(fileName);
-	fin.ignore();
-	while (fin.good()) {
-		data.push_back(new T(fin));
-	}
-	fin.close();
 }
 
 template<class T, class IdType>
 FileManager<T, IdType>::FileManager(const char* fileName) : fileName(fileName), auto_inc(false)
 {
-	std::ifstream fin(fileName);
-	fin.ignore();
-	while (fin.good()) {
-		data.push_back(new T(fin));
-	}
-	fin.close();
 }
 
-
-template<class T, class IdType>
-void FileManager<T, IdType>::save()
-{
-	std::ofstream fout(fileName, std::ios::trunc | std::ios::out);
-	for (T* el : data) { el->serialize(fout); }
-	fout.close();
-}
 
 template<class T, class IdType>
 void FileManager<T, IdType>::add(const T& element)
@@ -133,7 +116,7 @@ void FileManager<T, IdType>::add(const T& element)
 			data.push_back(element.clone());
 		}
 		else {
-			throw "id already exists";
+			throw "id alredy exists";
 		}
 	}
 	

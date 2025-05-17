@@ -5,7 +5,7 @@ class Board : Serializable {
 	int board[3][3];
 	bool inBounds(int x, int y);
 	int columnScore(int column[]) const;
-	bool notOccupied(int x, int y);
+	bool notOccupied(int x, int y) const;
 public:
 	Board();
 	Board(const int** matrix);
