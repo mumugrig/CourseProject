@@ -10,7 +10,7 @@
 
 
 
-TEST_CASE("TestManager") {
+TEST_CASE("PlayerManager") {
 	std::ofstream out("test.txt");
 	out.close();
 	PlayerManager manager("test.txt", 1);
@@ -75,13 +75,20 @@ TEST_CASE("Board") {
 	CHECK_THROWS(b.setValue(0, 1, 0));
 
 }
-TEST_CASE("Game") {
+TEST_CASE("GameManager") {
 	std::ofstream out("games.txt");
 	out.close();
+	out.open("players.txt");
+	out.close();
 
-	Player p1("player1");
-	Player p2("player2");
-	Game game(p1, p2);
+	PlayerManager playerManager("players.txt", 1);
+	playerManager.add(Player("player1"));
+	playerManager.add(Player("player2"));
+	CHECK_NOTHROW(playerManager.read(1));
+	CHECK_NOTHROW(playerManager.read(2));
+	Player p1 = playerManager.read(1);
+	Player p2 = playerManager.read(2);
+	Game game(p1, ASH, p2, ASH);
 
 	CHECK(game.getDie() <= 6 );
 	CHECK(game.getDie() >= 1);
@@ -97,16 +104,19 @@ TEST_CASE("Game") {
 
 	CHECK_THROWS(game.place(0, 0));
 
-	PlayerManager playerManager("players.txt", 1);
 	{
 		GameManager gameManager("games.txt", 1, playerManager);
-		playerManager.add(p1);
-		playerManager.add(p2);
+		CHECK_EQ(gameManager.readAll().size(), 0);
+
 		playerManager.save();
 		gameManager.add(game);
 		gameManager.save();
 	}
+
 	GameManager gameManager("games.txt", 1, playerManager);
+	CHECK_EQ(gameManager.readAll().size(), 1);
 	Game game2 = gameManager.read(1);
 	CHECK_EQ(game.getPlayer1Score(), game2.getPlayer1Score());
+	CHECK_EQ(game.getPlayer2Score(), game2.getPlayer2Score());
 }
+

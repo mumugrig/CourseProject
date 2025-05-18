@@ -17,7 +17,7 @@ protected:
 	
 	bool containsId(const T& element) const;
 	int find(const T& element) const;
-
+	bool validFile(std::istream& in);
 	//returns next id that is not taken
 	virtual IdType auto_increment();
 public:
@@ -81,6 +81,12 @@ int FileManager<T, IdType>::find(const T& element) const
 }
 
 template<class T, class IdType>
+inline bool FileManager<T, IdType>::validFile(std::istream& in)
+{
+	return in.peek() != '0' && in.peek() != -1 && in.peek() != 0 && in.peek() != '\n';
+}
+
+template<class T, class IdType>
 IdType FileManager<T, IdType>::auto_increment()
 {
 	if (largestId == nullptr) {
@@ -100,7 +106,7 @@ FileManager<T, IdType>::FileManager(const char* fileName, bool auto_inc)
 }
 
 template<class T, class IdType>
-FileManager<T, IdType>::FileManager(const char* fileName) : fileName(fileName), auto_inc(false)
+FileManager<T, IdType>::FileManager(const char* fileName) : fileName(fileName), auto_inc(true)
 {
 }
 

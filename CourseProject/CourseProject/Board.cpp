@@ -52,6 +52,11 @@ Board::Board(const int** matrix)
 	}
 }
 
+bool Board::validPosition(int x, int y) const
+{
+	return inBounds(x, y) && notOccupied(x, y);
+}
+
 bool Board::isFull() const
 {
 	for (int i = 0; i < 3; i++) {
@@ -77,7 +82,7 @@ int Board::score() const
 
 void Board::setValue(int x, int y, int value)
 {
-	if (value >= 1 && value <= 6 && inBounds(x, y) && notOccupied(x,y)) {
+	if (value >= 1 && value <= 6 && validPosition(x, y)) {
 		board[y][x] = value;
 	}
 	else {

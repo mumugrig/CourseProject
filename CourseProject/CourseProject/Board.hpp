@@ -3,13 +3,15 @@
 
 class Board : Serializable {
 	int board[3][3];
-	bool inBounds(int x, int y);
+	
 	int columnScore(int column[]) const;
 	bool notOccupied(int x, int y) const;
 public:
+	static bool inBounds(int x, int y);
 	Board();
 	Board(const int** matrix);
 	
+	bool validPosition(int x, int y) const;
 	bool isFull() const;
 	int score() const;
 	void setValue(int x, int y, int value);

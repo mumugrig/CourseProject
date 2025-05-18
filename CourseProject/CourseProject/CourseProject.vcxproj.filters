@@ -16,11 +16,11 @@
     <Filter Include="Libraries">
       <UniqueIdentifier>{6fcfeba8-e1b0-480d-96f4-73201cdd3820}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Characters">
+      <UniqueIdentifier>{5ef4d959-c231-4ed6-8cee-9321b9825d75}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -37,6 +37,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GameManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -73,6 +79,15 @@
     </ClInclude>
     <ClInclude Include="VectorUtility.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StorageSystem.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ash.hpp">
+      <Filter>Header Files\Characters</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

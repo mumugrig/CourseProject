@@ -39,9 +39,9 @@ void PlayerManager::add(const Player& player)
 PlayerManager::PlayerManager(const char* filename) : FileManager(filename)
 {
 	std::ifstream fin(filename);
-	fin.ignore();
-	while (fin.good()) {
+	while (fin.good() && validFile(fin)) {
 		data.push_back(deserialize(fin));
+		fin.ignore();
 	}
 	fin.close();
 }
@@ -49,9 +49,9 @@ PlayerManager::PlayerManager(const char* filename) : FileManager(filename)
 PlayerManager::PlayerManager(const char* filename, bool auto_inc) : FileManager(filename, auto_inc)
 {
 	std::ifstream fin(filename);
-	fin.ignore();
-	while (fin.good()) {
+	while (fin.good() && validFile(fin)) {
 		data.push_back(deserialize(fin));
+		fin.ignore();
 	}
 	fin.close();
 }

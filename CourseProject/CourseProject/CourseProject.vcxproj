@@ -135,12 +135,18 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="libraries\pcg_basic.c" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerManager.cpp" />
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="test.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Ash.hpp" />
     <ClInclude Include="Board.hpp" />
+    <ClInclude Include="Character.hpp" />
     <ClInclude Include="FileManager.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="GameManager.hpp" />
@@ -150,6 +156,7 @@
     <ClInclude Include="PlayerManager.hpp" />
     <ClInclude Include="Serializable.hpp" />
     <ClInclude Include="Storable.hpp" />
+    <ClInclude Include="StorageSystem.hpp" />
     <ClInclude Include="VectorUtility.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

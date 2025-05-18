@@ -15,22 +15,52 @@ C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.h
 C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(24,1): warning C4820: 'Player': '4' bytes padding added after data member 'Player::highScore'
   (compiling source file 'GameManager.cpp')
   
-C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(21,1): warning C4820: 'Board': '4' bytes padding added after data member 'Board::board'
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(23,1): warning C4820: 'Board': '4' bytes padding added after data member 'Board::board'
   (compiling source file 'GameManager.cpp')
   
-C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(21,1): warning C5204: 'Board': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(23,1): warning C5204: 'Board': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
   (compiling source file 'GameManager.cpp')
   
-C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(11,17): warning C4820: 'Game': '4' bytes padding added after data member 'Game::score1'
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(26,1): warning C4820: 'Character': '3' bytes padding added after data member 'Character::ready'
   (compiling source file 'GameManager.cpp')
   
-C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(43,1): warning C4820: 'Game': '7' bytes padding added after data member 'Game::turn'
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(26,1): warning C4626: 'Character': assignment operator was implicitly defined as deleted
   (compiling source file 'GameManager.cpp')
   
-C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(43,1): warning C4626: 'Game': assignment operator was implicitly defined as deleted
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(8,20): warning C4820: 'Ash': '7' bytes padding added after data member 'Ash::board'
   (compiling source file 'GameManager.cpp')
   
-C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(43,1): warning C5027: 'Game': move assignment operator was implicitly defined as deleted
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(36,1): warning C4626: 'Ash': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(36,1): warning C5027: 'Ash': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(14,25): warning C4458: declaration of 'x' hides class member
+  (compiling source file 'GameManager.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(5,6):
+  see declaration of 'Ash::x'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(14,32): warning C4458: declaration of 'y' hides class member
+  (compiling source file 'GameManager.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(6,6):
+  see declaration of 'Ash::y'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(14,40): warning C4458: declaration of 'board' hides class member
+  (compiling source file 'GameManager.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(7,7):
+  see declaration of 'Ash::board'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(13,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character1Id'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(15,17): warning C4820: 'Game': '4' bytes padding added after data member 'Game::score1'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(18,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character2Id'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(60,1): warning C4820: 'Game': '7' bytes padding added after data member 'Game::turn'
   (compiling source file 'GameManager.cpp')
   
 C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(39,1): warning C4820: 'FileManager<Player,unsigned int>': '7' bytes padding added after data member 'FileManager<Player,unsigned int>::auto_inc'
@@ -89,8 +119,26 @@ C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.h
   implicit assignment operator for 'Storable<unsigned int>' first required here
   C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(24,1):
   This diagnostic occurred in the compiler generated function 'Player &Player::operator =(const Player &)'
-  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.cpp(26,8):
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.cpp(28,8):
   see reference to function 'Player &Player::operator =(const Player &)'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(20,21): warning C4514: 'Character::getMessage': unreferenced inline function has been removed
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(21,21): warning C4514: 'Character::getDescription': unreferenced inline function has been removed
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(22,7): warning C4514: 'Character::getCooldown': unreferenced inline function has been removed
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(24,7): warning C4514: 'Character::reduceCooldown': unreferenced inline function has been removed
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(10,2): warning C4514: 'Ash::Ash': unreferenced inline function has been removed
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(14,7): warning C4514: 'Ash::setParameters': unreferenced inline function has been removed
+  (compiling source file 'GameManager.cpp')
   
      Creating library C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\x64\Debug\CourseProject.lib and object C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\x64\Debug\CourseProject.exp
   CourseProject.vcxproj -> C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\x64\Debug\CourseProject.exe
