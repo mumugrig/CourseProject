@@ -2,7 +2,7 @@
 #include "StorageSystem.hpp"
 #include "VectorUtility.hpp"
 #include <stdlib.h>
-#if 0
+#if 1
 
 void printLine() {
 	std::cout << "-------------" << std::endl;
@@ -69,20 +69,40 @@ int main() {
 
 	Game game = files.games().read(1);
 	int x = -1, y = -1;
-
+	char input = 0;
 	while (!game.gameEnded()) {
 		system("cls");
 		printGame(game);
 		std::cout << (game.getTurn() ? game.getPlayer2Username() : game.getPlayer1Username())
 			<< "\'s turn." << std::endl;
 		std::cout << "Rolled a " << game.getDie() << std::endl;
-		std::cout << "Enter position: ";
-		std::cin >> x >> y;
-		while (!(game.getTurn() ? game.getPlayer2Board() : game.getPlayer1Board()).validPosition(x, y)) {
-			std::cout << "invalid position" << std::endl;
-			std::cin >> x >> y;
+		if (game.getCurrentCharacter().getCooldown() == 0) {
+			std::cout << "Do you want to use your ability(1) or place your die(2): ";
+			std::cin >> input;
+			std::cout << std::endl;
 		}
-		game.place(x, y);
+		else { input = '2'; }
+		while (input != '1' && input != '2') {
+			std::cout << "Invalid input: expected 1 or 2" << std::endl;
+			std::cin >> input;
+			std::cout << std::endl;
+		}
+		if (input == '1') {
+			std::cout << game.getCurrentCharacter().getMessage() << std::endl;
+			game.readAndSetCharacterParameters(std::cin);
+			game.useAbility();
+		}
+		else if (input == '2') {
+			std::cout << "Enter position: ";
+			std::cin >> x >> y;
+			while (!(game.getCurrentBoard().validPosition(x, y))) {
+				std::cout << "invalid position" << std::endl;
+				std::cout << "Enter position: ";
+				std::cin >> x >> y;
+			}
+			game.place(x, y);
+		}
+		
 	}
 }
 

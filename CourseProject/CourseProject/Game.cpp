@@ -102,6 +102,8 @@ score2(other.score2), character1Id(other.character1Id), character2Id(other.chara
 {
     initializeCharacter1(character1Id);
     initializeCharacter2(character1Id);
+
+    seedRandom();
 }
 
 void Game::rollDie()
@@ -124,6 +126,11 @@ const std::string& Game::getPlayer1Username() const
     return player1.getUsername();
 }
 
+const Character& Game::getPlayer1Character() const
+{
+    return *character1;
+}
+
 const Board& Game::getPlayer1Board() const
 {
     return board1;
@@ -137,6 +144,11 @@ int Game::getPlayer1Score() const
 const std::string& Game::getPlayer2Username() const
 {
     return player2.getUsername();
+}
+
+const Character& Game::getPlayer2Character() const
+{
+    return *character2;
 }
 
 const Board& Game::getPlayer2Board() const
@@ -159,6 +171,26 @@ void Game::place(int x, int y)
     updateScore();
     passTurn();
 
+}
+
+void Game::readAndSetCharacterParameters(std::istream& in)
+{
+    turn ? character2->readAndSetParameters(in) : character1->readAndSetParameters(in);
+}
+
+const Character& Game::getCurrentCharacter() const
+{
+    return (turn ? getPlayer2Character() : getPlayer1Character());
+}
+
+const Board& Game::getCurrentBoard() const
+{
+    return (turn ? getPlayer2Board() : getPlayer1Board());
+}
+
+void Game::useAbility()
+{
+    turn ? character2->ability() : character1->ability();
 }
 
 

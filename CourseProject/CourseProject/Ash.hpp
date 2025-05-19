@@ -38,7 +38,7 @@ public:
 			cooldown += 4;
 		}
 		else {
-			throw "parameters not set";
+			throw "not ready";
 		}
 	}
 };

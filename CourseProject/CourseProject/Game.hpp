@@ -42,13 +42,18 @@ public:
 	int getDie() const;
 	bool getTurn() const;
 	const std::string& getPlayer1Username() const;
+	const Character& getPlayer1Character() const;
 	const Board& getPlayer1Board() const;
 	int getPlayer1Score() const;
 	const std::string& getPlayer2Username() const;
+	const Character& getPlayer2Character() const;
 	const Board& getPlayer2Board() const;
 	int getPlayer2Score() const;
 
 	void place(int x, int y);
+	void readAndSetCharacterParameters(std::istream& in);
+	const Character& getCurrentCharacter() const;
+	const Board& getCurrentBoard() const;
 	void useAbility();
 
 	bool gameEnded() const;
