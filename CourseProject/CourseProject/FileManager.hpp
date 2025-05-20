@@ -18,7 +18,7 @@ protected:
 	bool containsId(const T& element) const;
 	int find(const T& element) const;
 	bool validFile(std::istream& in);
-	//returns next id that is not taken
+	//returns the id after the largest taken id
 	virtual IdType auto_increment();
 public:
 	FileManager(const char* fileName , bool auto_inc);

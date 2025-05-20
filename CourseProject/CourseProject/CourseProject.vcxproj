@@ -150,10 +150,12 @@
     <ClInclude Include="FileManager.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="GameManager.hpp" />
+    <ClInclude Include="GameView.hpp" />
     <ClInclude Include="libraries\doctest.h" />
     <ClInclude Include="libraries\pcg_basic.h" />
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="PlayerManager.hpp" />
+    <ClInclude Include="Renderer.hpp" />
     <ClInclude Include="Serializable.hpp" />
     <ClInclude Include="Storable.hpp" />
     <ClInclude Include="StorageSystem.hpp" />

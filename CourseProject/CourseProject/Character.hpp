@@ -20,8 +20,9 @@ public:
 	const std::string& getMessage() const{ return message; }
 	const std::string& getDescription() const{ return description; }
 	virtual void readAndSetParameters(std::istream& in) = 0;
+	virtual void setParameters(const std::vector<int>& params) = 0;
 	 int getCooldown() const{ return cooldown; }
 	 bool onCooldown() const { return cooldown > 0; }
-	void reduceCooldown() { --cooldown; };
+	void reduceCooldown() { if(cooldown>0) --cooldown; };
 	virtual ~Character() {}
 };

@@ -86,7 +86,7 @@ void Board::setValue(int x, int y, int value)
 		board[y][x] = value;
 	}
 	else {
-		throw "invalid position";
+		throw std::runtime_error("invalid position");
 	}
 }
 

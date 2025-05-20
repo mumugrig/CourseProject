@@ -10,4 +10,5 @@ public:
 	
 	PlayerManager& players() { return playerManager; }
 	GameManager& games() { return gameManager; }
+	~StorageSystem() = default;
 };

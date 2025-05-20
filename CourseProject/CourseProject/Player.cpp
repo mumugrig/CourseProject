@@ -18,7 +18,7 @@ const std::string& Player::getUsername() const
 
 void Player::setUsername(const std::string& name)
 {
-    if (name.size() <= 50)username = name;
+    if (name.size() <= 50) username = name;
     else throw "name has to be <= 50 characters";
 }
 

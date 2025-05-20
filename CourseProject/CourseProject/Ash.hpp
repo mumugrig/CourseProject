@@ -16,14 +16,14 @@ public:
 		int y;
 		bool board;
 		in >> x >> y >> board;
-		setParameters(x, y, board);
+		setParameters({ x, y, board });
 	}
 
-	void setParameters(int x, int y, bool board) {
-		if (Board::inBounds(x, y)) {
-			this->x = x;
-			this->y = y;
-			this->board = board;
+	void setParameters(const std::vector<int>& params) override{
+		if (Board::inBounds(params[0], params[1])) {
+			this->x = params[0];
+			this->y = params[1];
+			this->board = params[2];
 			ready = true;
 		}
 		else {

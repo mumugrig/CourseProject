@@ -89,5 +89,11 @@
     <ClInclude Include="Ash.hpp">
       <Filter>Header Files\Characters</Filter>
     </ClInclude>
+    <ClInclude Include="GameView.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

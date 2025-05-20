@@ -16,11 +16,11 @@ public:
 
 	//returns first element that fulfills the condition otherwise throws
 	template <class T>
-	static const T& first(const std::function<bool(const T&)>& f, const std::vector<T> vector) {
+	static const T first(const std::function<bool(const T&)>& f, const std::vector<T> vector) {
 		for (const T& el : vector) {
 			if (f(el)) return el;
 		}
-		throw "does not exist";
+		throw std::invalid_argument("does not exist");
 	}
 
 	//returns true if there is an element that fulfills the condition, otherwise returns false

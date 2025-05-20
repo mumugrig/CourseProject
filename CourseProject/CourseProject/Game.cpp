@@ -2,6 +2,7 @@
 
 void Game::passTurn()
 {
+    (turn ? character2 : character1)->reduceCooldown();
     turn = !turn;
     rollDie();
 }

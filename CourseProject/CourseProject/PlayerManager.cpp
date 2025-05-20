@@ -1,6 +1,6 @@
 #include "PlayerManager.hpp"
 #include "VectorUtility.hpp"
-
+#include <stdexcept>
 void PlayerManager::serialize(const Player& element, std::ostream& out)
 {
 	out << element.getId() << ' '
@@ -32,7 +32,7 @@ void PlayerManager::add(const Player& player)
 		FileManager::add(player);
 	}
 	else {
-		throw "username already exists";
+		throw std::runtime_error("username already exists");
 	}	
 }
 
