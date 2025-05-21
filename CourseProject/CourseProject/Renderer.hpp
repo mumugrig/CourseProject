@@ -1,6 +1,9 @@
+#pragma once
 #include "Libraries/color.hpp"
 #include <functional>
 #include <stdlib.h>
+#include <vector>
+#include <string>
 class Renderer {
 public:
 	static std::vector<std::string> dieOne;

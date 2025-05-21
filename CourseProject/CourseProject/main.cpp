@@ -1,7 +1,4 @@
-﻿#include <iostream>
-#include "StorageSystem.hpp"
-#include "VectorUtility.hpp"
-#include "Renderer.hpp"
+﻿#include "VectorUtility.hpp"
 #include "GameView.hpp"
 
 #if 1

@@ -7,9 +7,9 @@ class Ash : public Character {
 	bool board;
 	Board& playerBoard;
 public:
-	Ash(Board& playerBoard, Board& opponentBoard) :Character(opponentBoard, 
+	Ash(Board& playerBoard, Board& opponentBoard) : Character(opponentBoard, 
 		"Please enter coordinates and a board(1 for enemy 0 for current): ",
-		"Destroy one die from any board."), x(0), y(0), board(0), playerBoard(playerBoard) {}
+		"Destroy one die from any board.", 4, dye::red_on_black<std::string>), x(0), y(0), board(0), playerBoard(playerBoard) {}
 
 	void readAndSetParameters(std::istream& in) {
 		int x;
@@ -33,9 +33,15 @@ public:
 
 	void ability() override {
 		if (ready && !onCooldown()) {
-			board ? opponentBoard.clearValue(x, y) : playerBoard.clearValue(x, y);
-			ready = false;
-			cooldown += 4;
+			if (x != 3) {
+				board ? opponentBoard.clearValue(x, y) : playerBoard.clearValue(x, y);
+				ready = false;
+				setCooldown();
+			}
+			else if(Board::inBounds(0,y)){
+
+			}
+			
 		}
 		else {
 			throw "not ready";

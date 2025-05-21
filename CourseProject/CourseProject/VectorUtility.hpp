@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <functional>
+#include <stdexcept>
 
 static class VectorUtility {
 public:

@@ -1,1 +1,277 @@
-﻿  CourseProject.vcxproj -> C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\x64\Debug\CourseProject.exe
+﻿  GameView.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\limits.h(70,5): warning C4668: '__STDC_WANT_SECURE_LIB__' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Serializable.hpp(7,1): warning C5204: 'Serializable': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1): warning C4820: 'Storable<unsigned int>': '4' bytes padding added after data member 'Storable<unsigned int>::id'
+  (compiling source file 'GameView.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(6,23):
+  	see reference to class template instantiation 'Storable<unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(24,1): warning C4820: 'Player': '4' bytes padding added after data member 'Player::highScore'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(39,1): warning C4820: 'FileManager<Player,unsigned int>': '7' bytes padding added after data member 'FileManager<Player,unsigned int>::auto_inc'
+  (compiling source file 'GameView.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(39,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(5,30):
+  	see reference to class template instantiation 'FileManager<Player,unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(38,3): warning C4265: 'FileManager<Player,unsigned int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4625: 'PlayerManager': copy constructor was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C5026: 'PlayerManager': move constructor was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4626: 'PlayerManager': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C5027: 'PlayerManager': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4265: 'PlayerManager': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(23,1): warning C4820: 'Board': '4' bytes padding added after data member 'Board::board'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(23,1): warning C5204: 'Board': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winbase.h(7810,48): warning C5039: 'TpSetCallbackCleanupGroup': pointer or reference to potentially throwing function passed to 'extern "C"' function under -EHc. Undefined behavior may occur if this function throws an exception.
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10847,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10853,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10858,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10863,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10870,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10875,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10886,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10891,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10897,22): warning C4668: '_WIN32_WINNT_WIN10_RS3' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10905,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10909,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10913,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10918,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10921,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10970,23): warning C4668: 'NTDDI_WIN10_CU' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10974,23): warning C4668: 'NTDDI_WIN10_CU' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(11171,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(11195,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(14754,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(14956,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15059,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15155,21): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15259,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16004,23): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16092,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16218,22): warning C4668: '_WIN32_WINNT_WIN10_RS3' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16367,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16380,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16609,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Libraries\color.hpp(121,70): warning C4242: 'argument': conversion from 'int' to 'WORD', possible loss of data
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Libraries\color.hpp(121,70): warning C4365: 'argument': conversion from 'int' to 'WORD', signed/unsigned mismatch
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(19,22): warning C4820: 'Character': '3' bytes padding added after data member 'Character::ready'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(34,1): warning C4626: 'Character': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(21,70): warning C5038: data member 'Character::color' will be initialized after data member 'Character::cooldown'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(8,20): warning C4820: 'Ash': '7' bytes padding added after data member 'Ash::board'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(44,1): warning C4626: 'Ash': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(44,1): warning C5027: 'Ash': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(15,7): warning C4458: declaration of 'x' hides class member
+  (compiling source file 'GameView.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(5,6):
+  see declaration of 'Ash::x'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(16,7): warning C4458: declaration of 'y' hides class member
+  (compiling source file 'GameView.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(6,6):
+  see declaration of 'Ash::y'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(17,8): warning C4458: declaration of 'board' hides class member
+  (compiling source file 'GameView.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(7,7):
+  see declaration of 'Ash::board'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(26,26): warning C4800: Implicit conversion from 'const _Ty' to bool. Possible information loss
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(26,26): warning C4800:         with
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(26,26): warning C4800:         [
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(26,26): warning C4800:             _Ty=int
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(26,26): warning C4800:         ]
+  (compiling source file 'GameView.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(26,26):
+  consider using explicit cast or comparison to 0 to avoid this warning
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\vector(435,29):
+  see declaration of '_Ty'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(13,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character1Id'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(15,17): warning C4820: 'Game': '4' bytes padding added after data member 'Game::score1'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(18,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character2Id'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(66,1): warning C4820: 'Game': '7' bytes padding added after data member 'Game::turn'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(39,1): warning C4820: 'FileManager<Game,unsigned int>': '7' bytes padding added after data member 'FileManager<Game,unsigned int>::auto_inc'
+  (compiling source file 'GameView.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(39,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(5,28):
+  	see reference to class template instantiation 'FileManager<Game,unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(38,3): warning C4265: 'FileManager<Game,unsigned int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4625: 'GameManager': copy constructor was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C5026: 'GameManager': move constructor was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4626: 'GameManager': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C5027: 'GameManager': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4265: 'GameManager': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\StorageSystem.hpp(14,1): warning C4625: 'StorageSystem': copy constructor was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\StorageSystem.hpp(14,1): warning C4626: 'StorageSystem': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(11,12): warning C4820: 'GameView': '7' bytes padding added after data member 'GameView::board'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(43,1): warning C4626: 'GameView': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(43,1): warning C5027: 'GameView': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(54,14): warning C5038: data member 'GameView::storage' will be initialized after data member 'GameView::x'
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(94,44): warning C4244: '=': conversion from 'int' to 'char', possible loss of data
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(110,44): warning C4244: '=': conversion from 'int' to 'char', possible loss of data
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(127,44): warning C4244: '=': conversion from 'int' to 'char', possible loss of data
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(137,41): warning C4458: declaration of 'game' hides class member
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(11,8):
+  see declaration of 'GameView::game'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(149,41): warning C4458: declaration of 'game' hides class member
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(11,8):
+  see declaration of 'GameView::game'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(157,38): warning C4458: declaration of 'game' hides class member
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(11,8):
+  see declaration of 'GameView::game'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(196,37): warning C4101: 'ex': unreferenced local variable
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(97): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(89): message : index 'j' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(97): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(94): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(94): message : index '' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(94): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(113): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(105): message : index 'j' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(113): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(110): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(110): message : index '' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(110): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(130): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(122): message : index 'j' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(130): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(127): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(127): message : index '' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(127): message : feeds call on this line
+     Creating library C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\x64\Debug\CourseProject.lib and object C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\x64\Debug\CourseProject.exp
+  CourseProject.vcxproj -> C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\x64\Debug\CourseProject.exe

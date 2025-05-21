@@ -45,6 +45,9 @@
     <ClCompile Include="test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GameView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.hpp">
@@ -94,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="Renderer.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\color.hpp">
+      <Filter>Libraries</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
