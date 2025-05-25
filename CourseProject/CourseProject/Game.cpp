@@ -4,24 +4,21 @@ void Game::passTurn()
 {
     (turn ? character2 : character1)->reduceCooldown();
     turn = !turn;
-    rollDie();
+    die.rollDie();
 }
 
 
 void Game::place(bool board, int x, int y)
 {
     if (board) {
-        board2.setValue(x, y, dieNumber);
+        board2.setValue(x, y, die.getValue());
     }
     else {
-        board1.setValue(x, y, dieNumber);
+        board1.setValue(x, y, die.getValue());
     }
 }
 
-void Game::seedRandom()
-{
-    pcg32_srandom_r(&rng, time(0), (size_t)this);
-}
+
 
 Game* Game::clone() const 
 {
@@ -43,14 +40,14 @@ void Game::removeFromEnemyBoard(int column)
 {
     if (turn) {
         for (int i = 0; i < 3; i++) {
-            if (board1.getValue(column, i) == dieNumber) {
+            if (board1.getValue(column, i) == die.getValue()) {
                 board1.clearValue(column, i);
             }
         }
     }
     else {
         for (int i = 0; i < 3; i++) {
-            if (board2.getValue(column, i) == dieNumber) {
+            if (board2.getValue(column, i) == die.getValue()) {
                 board2.clearValue(column, i);
             }
         }
@@ -60,7 +57,8 @@ void Game::removeFromEnemyBoard(int column)
 void Game::initializeCharacter1(CharacterEnum character)
 {
     switch (character) {
-        case ASH: character1 = new Ash(board1, board2);
+    case ASH: character1 = new Ash(board1, board2, character2, 0); break;
+    case FELIX: character1 = new Felix(die); break;
 
     }
 }
@@ -68,53 +66,47 @@ void Game::initializeCharacter1(CharacterEnum character)
 void Game::initializeCharacter2(CharacterEnum character)
 {
     switch (character) {
-        case ASH: character2 = new Ash(board2, board1);
-
+    case ASH: character2 = new Ash(board1, board2, character1, 1); break;
+        case FELIX: character2 = new Felix(die); break;
     }
 }
 
-Game::Game(Player& p1, CharacterEnum character1, Player& p2, CharacterEnum character2) : 
-    Storable(0),player1(p1), player2(p2), turn(0), dieNumber(0), rng(), score1(0), score2(0),
+Game::Game(const Player& p1, CharacterEnum character1, const Player& p2, CharacterEnum character2) : 
+    Storable(0),player1(p1), player2(p2), turn(0), score1(0), score2(0),
     character1Id(character1), character2Id(character2)
 {
     initializeCharacter1(character1Id);
-    initializeCharacter2(character1Id);
+    initializeCharacter2(character2Id);
 
-    seedRandom();
-    rollDie();
+    die.rollDie();
 }
 
-Game::Game(unsigned int id, Player& p1, CharacterEnum character1,  Player& p2, CharacterEnum character2,
+Game::Game(unsigned int id, const Player& p1, CharacterEnum character1,  const Player& p2, CharacterEnum character2,
     const Board& board1, const Board& board2, bool turn) :
     player1(p1), player2(p2), board1(board1),board2(board2),turn(turn),
-    Storable(id), dieNumber(0), rng(), score1(board1.score()), score2(board2.score()),
+    Storable(id), score1(board1.score()), score2(board2.score()),
     character1Id(character1), character2Id(character2)
 {
     initializeCharacter1(character1);
-    initializeCharacter2(character1);
+    initializeCharacter2(character2);
 
-    seedRandom();
-    rollDie();
+    die.rollDie();
 }
 
 Game::Game(const Game& other) : Storable(other.id), player1(other.player1), player2(other.player2),
-board1(other.board1), board2(other.board2), turn(other.turn), dieNumber(other.dieNumber), rng(), score1(other.score1),
-score2(other.score2), character1Id(other.character1Id), character2Id(other.character2Id)
+board1(other.board1), board2(other.board2), turn(other.turn), score1(other.score1),
+score2(other.score2), character1Id(other.character1Id), character2Id(other.character2Id), die(other.die)
 {
     initializeCharacter1(character1Id);
-    initializeCharacter2(character1Id);
+    initializeCharacter2(character2Id);
 
-    seedRandom();
 }
 
-void Game::rollDie()
-{  
-    dieNumber = pcg32_boundedrand_r(&rng, 6) + 1;
-}
 
-int Game::getDie() const
+
+int Game::getDieValue() const
 {
-    return dieNumber;
+    return die.getValue();
 }
 
 bool Game::getTurn() const
@@ -177,6 +169,11 @@ void Game::place(int x, int y)
 void Game::readAndSetCharacterParameters(std::istream& in)
 {
     turn ? character2->readAndSetParameters(in) : character1->readAndSetParameters(in);
+}
+
+void Game::setCharacterParameters(std::vector<int> params)
+{
+    turn ? character2->setParameters(params) : character1->setParameters(params);
 }
 
 const Character& Game::getCurrentCharacter() const

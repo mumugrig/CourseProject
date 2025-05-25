@@ -45,7 +45,7 @@
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <EnableASAN>true</EnableASAN>
-    <EnableFuzzer>true</EnableFuzzer>
+    <EnableFuzzer>false</EnableFuzzer>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -132,6 +132,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
+    <ClCompile Include="BothBoardsPosition.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameView.cpp" />
@@ -139,6 +140,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerManager.cpp" />
+    <ClCompile Include="SingleBoardPosition.cpp" />
+    <ClCompile Include="SingleBoardPosition.hpp" />
     <ClCompile Include="test.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
@@ -147,7 +150,10 @@
   <ItemGroup>
     <ClInclude Include="Ash.hpp" />
     <ClInclude Include="Board.hpp" />
+    <ClInclude Include="BothBoardsPosition.hpp" />
     <ClInclude Include="Character.hpp" />
+    <ClInclude Include="Die.hpp" />
+    <ClInclude Include="Felix.hpp" />
     <ClInclude Include="FileManager.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="GameManager.hpp" />
@@ -157,7 +163,8 @@
     <ClInclude Include="libraries\pcg_basic.h" />
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="PlayerManager.hpp" />
-    <ClInclude Include="Renderer.hpp" />
+    <ClInclude Include="Position.hpp" />
+    <ClInclude Include="Selection.hpp" />
     <ClInclude Include="Serializable.hpp" />
     <ClInclude Include="Storable.hpp" />
     <ClInclude Include="StorageSystem.hpp" />

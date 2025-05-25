@@ -19,17 +19,16 @@ Game* GameManager::deserialize(std::istream& in)
     Board b1;
     Board b2;
     bool turn;
-    Player p1("null");
-    Player p2("null");
+ 
 
     in >> id;
 
     in >> player1Id;
-    p1 = players.read(player1Id);
+    const Player& p1 = players.read(player1Id);
     in >> character1;
     b1.deserialize(in);
     in >> player2Id;
-    p2 = players.read(player2Id);
+    const Player& p2 = players.read(player2Id);
     in >> character2;
     b2.deserialize(in);
     in >> turn;

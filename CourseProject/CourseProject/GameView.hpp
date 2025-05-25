@@ -1,33 +1,26 @@
 #pragma once
 #include "StorageSystem.hpp"
 #include "Libraries/color.hpp"
+#include "SingleBoardPosition.hpp"
+#include "BothBoardsPosition.hpp"
 #include <Windows.h>
 
-class GameView {
-	int x;
-	int y;
-	bool board;
 
+class GameView {
+
+	Position* position;
+	
 	Game& game;
 	StorageSystem& storage;
+
+	bool usingAbility;
+	Selection abilitySelection;
+
 	bool keyPressed(char key);
-	void moveConditionXOneBoard();
-	void moveConditionXBothBoards();
-	void moveConditionYOneBoard();
-	void moveConditionYBothBoards();
-	void moveConditionX();
-	void moveConditionY();
 
 	bool selectSinglePlayer1Board(int j, int i);
 	bool selectSinglePlayer2Board(int j, int i);
-public:
-	GameView(Game& game, StorageSystem& storage);
-	const Game& getGame();
-	void moveUp();
-	void moveDown();
-	void moveLeft();
-	void moveRight();
-	void selectPlace();
+
 
 	void printLine();
 
@@ -37,6 +30,17 @@ public:
 
 	void printPlayer1(const Game& game);
 	void printPlayer2(const Game& game);
+
+public:
+	GameView(Game& game, StorageSystem& storage);
+	GameView(const GameView& other) = delete;
+	GameView& operator=(const GameView& other) = delete;
+	~GameView();
+
+	const Game& getGame();
+
+	void selectPlace();
+
 	void printGame(const Game& game);
 
 	void startGame();

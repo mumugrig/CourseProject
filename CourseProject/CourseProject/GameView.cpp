@@ -8,76 +8,27 @@ inline bool GameView::keyPressed(char key) {
 	return false;
 }
 
-inline void GameView::moveConditionXOneBoard() {
-	if (x < 0)x = 3;
-	if (x > 3) x = 0;
-}
-
-inline void GameView::moveConditionXBothBoards() {
-	if (x < 0)x = 3;
-	if (x > 3) x = 0;
-}
-
-inline void GameView::moveConditionYOneBoard() {
-	if (y < 0) y = 2;
-	if (y > 2) y = 0;
-}
-
-inline void GameView::moveConditionYBothBoards() {
-	if (y < 0) {
-		y = 2;
-		board = !board;
-	}
-	if (y > 2) {
-		y = 0;
-		board = !board;
-	}
-}
-
-inline void GameView::moveConditionX() {
-	moveConditionXOneBoard();
-}
-
-inline void GameView::moveConditionY() {
-	moveConditionYOneBoard();
-}
-
 inline bool GameView::selectSinglePlayer1Board(int j, int i) {
-	return !board && i == y && j == x;
+	return !position->board() && i == position->y() && j == position->x();
 }
 
 inline bool GameView::selectSinglePlayer2Board(int j, int i) {
-	return board && i == y && j == x;
+	return position->board() && i == position->y() && j == position->x();
 }
 
 GameView::GameView(Game& game, StorageSystem& storage) :
-	game(game), storage(storage), x(0), y(0), board(false) {}
+	game(game), storage(storage), position(new SingleBoardPosition()), usingAbility(false) {}
+
+GameView::~GameView()
+{
+	delete position;
+}
 
 inline const Game& GameView::getGame() { return game; }
 
-inline void GameView::moveUp() {
-	y--;
-	moveConditionY();
-}
-
-inline void GameView::moveDown() {
-	y++;
-	moveConditionY();
-}
-
-inline void GameView::moveLeft() {
-	x--;
-	moveConditionX();
-}
-
-inline void GameView::moveRight() {
-	x++;
-	moveConditionX();
-}
-
 inline void GameView::selectPlace() {
-	game.place(x, y);
-	board = game.getTurn();
+	game.place(position->x(), position->y());
+	position->setBoard(game.getTurn());
 }
 
 inline void GameView::printLine() {
@@ -88,7 +39,7 @@ inline void GameView::printRow1(const Board& gameBoard, const std::function<bool
 	printLine();
 	for (int j = 0; j < 3; j++) {
 		std::cout << '|';
-		if (selectCondition(j, 0)) std::cout << hue::black_on_light_red;
+		if (selectCondition(j, 0)) game.getCurrentCharacter().selectionColor(std::cout);
 		std::cout << ' ';
 		char c;
 		if (gameBoard.getValue(j, 0) > 0)c = '0' + gameBoard.getValue(j, 0);
@@ -101,10 +52,10 @@ inline void GameView::printRow1(const Board& gameBoard, const std::function<bool
 }
 
 inline void GameView::printRow2(const Board& gameBoard, const std::function<bool(int, int)>& selectCondition, const Character& character) {
-	std::cout << "+---+---+---+      " << game.getPlayer1Character().color("++---++") << std::endl;
+	std::cout << "+---+---+---+      " << character.color("++---++") << std::endl;
 	for (int j = 0; j < 3; j++) {
 		std::cout << '|';
-		if (selectCondition(j, 1)) std::cout << hue::black_on_light_red;
+		if (selectCondition(j, 1)) game.getCurrentCharacter().selectionColor(std::cout);
 		std::cout << ' ';
 		char c;
 		if (gameBoard.getValue(j, 1) > 0)c = '0' + gameBoard.getValue(j, 1);
@@ -113,15 +64,20 @@ inline void GameView::printRow2(const Board& gameBoard, const std::function<bool
 		std::cout << c << ' ';
 		std::cout << hue::reset;
 	}
-	if (selectCondition(3,0) || selectCondition(3,1) || selectCondition(3,2)) std::cout << "|      " << character.color("|| ") << character.color("O") << character.color(" ||") << std::endl;
-	else std::cout << "|      " << character.color("|| ") << character.color("X") << character.color(" ||") << std::endl;
+	std::cout << "|      " << character.color("||");
+	if ((selectCondition(3, 0) || selectCondition(3, 1) || selectCondition(3, 2))) {
+		game.getCurrentCharacter().selectionColor(std::cout);
+		std::cout << ' ' << (usingAbility ? 'O' : character.getSymbol()) << ' ';
+	}
+	else std::cout << ' ' << character.color(std::string(1, character.getSymbol())) << ' ';
+	std::cout << hue::reset << character.color("||") << std::endl;
 	std::cout << "+---+---+---+      " << character.color("++---++") << std::endl;
 }
 
 inline void GameView::printRow3(const Board& gameBoard, const std::function<bool(int, int)>& selectCondition) {
 	for (int j = 0; j < 3; j++) {
 		std::cout << '|';
-		if (selectCondition(j, 2)) std::cout << hue::black_on_light_red;
+		if (selectCondition(j, 2)) game.getCurrentCharacter().selectionColor(std::cout);
 		std::cout << ' ';
 		char c;
 		if (gameBoard.getValue(j, 2) > 0)c = '0' + gameBoard.getValue(j, 2);
@@ -144,7 +100,6 @@ void GameView::printPlayer1(const Game& game)
 	printRow3(board1, [this](int j, int i) {return selectSinglePlayer1Board(j, i); });
 
 	std::cout << game.getPlayer1Score() << std::endl;
-
 }
 void GameView::printPlayer2(const Game& game) {
 	std::cout << game.getPlayer2Score() << std::endl;
@@ -162,32 +117,41 @@ void GameView::printGame(const Game& game) {
 	std::cout << std::endl;
 	std::cout << (game.getTurn() ? game.getPlayer2Username() : game.getPlayer1Username())
 		<< "\'s turn." << std::endl;
-	std::cout << "Rolled a " << game.getDie() << std::endl;
+	std::cout << "Rolled a " << game.getDieValue() << std::endl;
 }
 void GameView::startGame() {
 	printGame(game);
 	while (!game.gameEnded()) {
 		if (keyPressed(VK_LEFT)) {
-			moveLeft();
+			position->moveLeft();
 			printGame(game);
 		}
 		if (keyPressed(VK_UP)) {
-			moveUp();
+			position->moveUp();
 			printGame(game);
 		}
 		if (keyPressed(VK_RIGHT)) {
-			moveRight();
+			position->moveRight();
 			printGame(game);
 		}
 		if (keyPressed(VK_DOWN)) {
-			moveDown();
+			position->moveDown();
 			printGame(game);
 		}
 		if (keyPressed(VK_RETURN)) {
-			try {
-				if (x == 3) {
 
+			try {
+				if (position->x() == 3 && !game.getCurrentCharacter().onCooldown() && !usingAbility) {		
+					Position* newPosition = game.getCurrentCharacter().moveType(position);
+					delete position;
+					position = newPosition;
+					usingAbility = true;
+					abilitySelection = game.getCurrentCharacter().selectionType();
 				}
+				else if (usingAbility && !abilitySelection.isReady()) {
+					abilitySelection.push(position->x(), position->y(), position->board());
+					
+				}	
 				else {
 					selectPlace();
 				}
@@ -195,6 +159,23 @@ void GameView::startGame() {
 			}
 			catch (const std::runtime_error& ex) {}
 		}
+		if (usingAbility && abilitySelection.isReady()) {
+			try {
+				game.setCharacterParameters(abilitySelection.getParameters());
+				game.useAbility();
+				Position* newPosition = new SingleBoardPosition(*position);
+				delete position;
+				position = newPosition;
+				position->setBoard(game.getTurn());
+				usingAbility = false;
+			}
+			catch (const std::invalid_argument& ex) {
+				std::cout << ex.what() << std::endl;
+				abilitySelection = game.getCurrentCharacter().selectionType();
+			}
+			printGame(game);
+		}
+
 		Sleep(50);
 	}
 	printGame(game);

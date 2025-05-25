@@ -19,6 +19,12 @@
     <Filter Include="Header Files\Characters">
       <UniqueIdentifier>{5ef4d959-c231-4ed6-8cee-9321b9825d75}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Storage">
+      <UniqueIdentifier>{3ec85176-e4a9-427b-b65c-25587605010a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Positions">
+      <UniqueIdentifier>{c30df6f7-8e7a-4019-aca0-bce113b026bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Player.cpp">
@@ -48,6 +54,15 @@
     <ClCompile Include="GameView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SingleBoardPosition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BothBoardsPosition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleBoardPosition.hpp">
+      <Filter>Header Files\Positions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.hpp">
@@ -56,16 +71,7 @@
     <ClInclude Include="Game.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FileManager.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Storable.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Board.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Serializable.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="libraries\doctest.h">
@@ -74,19 +80,7 @@
     <ClInclude Include="libraries\pcg_basic.h">
       <Filter>Libraries</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerManager.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameManager.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="VectorUtility.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StorageSystem.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Character.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Ash.hpp">
@@ -95,11 +89,44 @@
     <ClInclude Include="GameView.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Renderer.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Libraries\color.hpp">
       <Filter>Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="FileManager.hpp">
+      <Filter>Header Files\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.hpp">
+      <Filter>Header Files\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerManager.hpp">
+      <Filter>Header Files\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Storable.hpp">
+      <Filter>Header Files\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Serializable.hpp">
+      <Filter>Header Files\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="StorageSystem.hpp">
+      <Filter>Header Files\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.hpp">
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Felix.hpp">
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Die.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Position.hpp">
+      <Filter>Header Files\Positions</Filter>
+    </ClInclude>
+    <ClInclude Include="BothBoardsPosition.hpp">
+      <Filter>Header Files\Positions</Filter>
+    </ClInclude>
+    <ClInclude Include="Selection.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
