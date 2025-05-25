@@ -9,7 +9,7 @@ class Felix : public Character {
 
 public:
 
-	Felix(Die& die) : Character("Rerolls your die", "Rerolls your die", 2, 0, dye::green<std::string>, hue::bright_white_on_green, '?'), die(die) {}
+	Felix(Die& die) : Character("Felix", "Rerolls your die", 2, 0, dye::green<std::string>, hue::bright_white_on_green, '?'), die(die) {}
 
 	void ability() override {
 		if (!onCooldown()) {

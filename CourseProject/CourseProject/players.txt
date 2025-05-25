@@ -1,2 +1,5 @@
 1 player1 0
 2 player2 0
+3 1 0
+4 mumugrig 0
+5 aaabc 0

@@ -13,7 +13,7 @@ class Ash : public Character {
 	Character*& opponentCharacter;
 public:
 	Ash(Board& player1Board, Board& player2Board, Character*& enemyCharacter, bool player) : Character( 
-		"Please enter coordinates and a board(1 for enemy 0 for current): ",
+		"Ash",
 		"Destroy one die from any board.", 4, 1, dye::red_on_black<std::string>, hue::black_on_light_red ,'X'), x(0), y(0), board(0), player1Board(player1Board), player2Board(player2Board), opponentCharacter(enemyCharacter), player(player) {}
 
 	BothBoardsPosition* moveType(const Position* const position) const override {

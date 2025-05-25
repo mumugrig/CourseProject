@@ -4,6 +4,7 @@
 #include "Character.hpp"
 #include "Ash.hpp"
 #include "Felix.hpp"
+#include "Columna.hpp"
 #include "Libraries/pcg_basic.h"
 #include "Die.hpp"
 
@@ -48,6 +49,7 @@ public:
 	const Character& getPlayer2Character() const;
 	const Board& getPlayer2Board() const;
 	int getPlayer2Score() const;
+	const std::string& getWinnerUsername() const;
 
 	void place(int x, int y);
 	void readAndSetCharacterParameters(std::istream& in);

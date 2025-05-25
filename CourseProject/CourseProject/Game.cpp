@@ -19,7 +19,6 @@ void Game::place(bool board, int x, int y)
 }
 
 
-
 Game* Game::clone() const 
 {
     return new Game(id, player1, character1Id, player2, character2Id, board1, board2, turn);
@@ -59,7 +58,7 @@ void Game::initializeCharacter1(CharacterEnum character)
     switch (character) {
     case ASH: character1 = new Ash(board1, board2, character2, 0); break;
     case FELIX: character1 = new Felix(die); break;
-
+    case COLUMNA: character1 = new Columna(board2); break;
     }
 }
 
@@ -67,7 +66,8 @@ void Game::initializeCharacter2(CharacterEnum character)
 {
     switch (character) {
     case ASH: character2 = new Ash(board1, board2, character1, 1); break;
-        case FELIX: character2 = new Felix(die); break;
+    case FELIX: character2 = new Felix(die); break;
+    case COLUMNA: character2 = new Columna(board1); break;
     }
 }
 
@@ -154,6 +154,12 @@ int Game::getPlayer2Score() const
     return score2;
 }
 
+const std::string& Game::getWinnerUsername() const
+{
+    if (score1 == score2) return "Draw";
+    return score1 > score2 ? player1.getUsername() : player2.getUsername();
+}
+
 
 void Game::place(int x, int y)
 {
@@ -189,6 +195,7 @@ const Board& Game::getCurrentBoard() const
 void Game::useAbility()
 {
     turn ? character2->ability() : character1->ability();
+    updateScore();
 }
 
 

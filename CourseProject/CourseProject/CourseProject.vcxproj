@@ -133,6 +133,7 @@
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="BothBoardsPosition.cpp" />
+    <ClCompile Include="ColumnSingleBoardPosition.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameView.cpp" />
@@ -152,6 +153,8 @@
     <ClInclude Include="Board.hpp" />
     <ClInclude Include="BothBoardsPosition.hpp" />
     <ClInclude Include="Character.hpp" />
+    <ClInclude Include="Columna.hpp" />
+    <ClInclude Include="ColumnSingleBoardPosition.hpp" />
     <ClInclude Include="Die.hpp" />
     <ClInclude Include="Felix.hpp" />
     <ClInclude Include="FileManager.hpp" />

@@ -8,13 +8,6 @@ inline bool GameView::keyPressed(char key) {
 	return false;
 }
 
-inline bool GameView::selectSinglePlayer1Board(int j, int i) {
-	return !position->board() && i == position->y() && j == position->x();
-}
-
-inline bool GameView::selectSinglePlayer2Board(int j, int i) {
-	return position->board() && i == position->y() && j == position->x();
-}
 
 GameView::GameView(Game& game, StorageSystem& storage) :
 	game(game), storage(storage), position(new SingleBoardPosition()), usingAbility(false) {}
@@ -35,7 +28,7 @@ inline void GameView::printLine() {
 	std::cout << ("+---+---+---+") << std::endl;
 }
 
-inline void GameView::printRow1(const Board& gameBoard, const std::function<bool(int, int)>& selectCondition) {
+inline void GameView::printRow1(const Game& game, const Board& gameBoard, const std::function<bool(int, int)>& selectCondition) {
 	printLine();
 	for (int j = 0; j < 3; j++) {
 		std::cout << '|';
@@ -51,7 +44,7 @@ inline void GameView::printRow1(const Board& gameBoard, const std::function<bool
 	std::cout << '|' << std::endl;
 }
 
-inline void GameView::printRow2(const Board& gameBoard, const std::function<bool(int, int)>& selectCondition, const Character& character) {
+inline void GameView::printRow2(const Game& game, const Board& gameBoard, const std::function<bool(int, int)>& selectCondition, const Character& character) {
 	std::cout << "+---+---+---+      " << character.color("++---++") << std::endl;
 	for (int j = 0; j < 3; j++) {
 		std::cout << '|';
@@ -74,7 +67,7 @@ inline void GameView::printRow2(const Board& gameBoard, const std::function<bool
 	std::cout << "+---+---+---+      " << character.color("++---++") << std::endl;
 }
 
-inline void GameView::printRow3(const Board& gameBoard, const std::function<bool(int, int)>& selectCondition) {
+inline void GameView::printRow3(const Game& game, const Board& gameBoard, const std::function<bool(int, int)>& selectCondition) {
 	for (int j = 0; j < 3; j++) {
 		std::cout << '|';
 		if (selectCondition(j, 2)) game.getCurrentCharacter().selectionColor(std::cout);
@@ -95,18 +88,18 @@ void GameView::printPlayer1(const Game& game)
 	std::cout << game.getPlayer1Username() << std::endl;
 	const Board& board1 = game.getPlayer1Board();
 
-	printRow1(board1, [this](int j, int i) {return selectSinglePlayer1Board(j, i); });
-	printRow2(board1, [this](int j, int i) {return selectSinglePlayer1Board(j, i); }, game.getPlayer1Character());
-	printRow3(board1, [this](int j, int i) {return selectSinglePlayer1Board(j, i); });
+	printRow1(game, board1, [this](int j, int i) {return position->player1SelectCondition(j, i); });
+	printRow2(game, board1, [this](int j, int i) {return position->player1SelectCondition(j, i); }, game.getPlayer1Character());
+	printRow3(game, board1, [this](int j, int i) {return position->player1SelectCondition(j, i); });
 
 	std::cout << game.getPlayer1Score() << std::endl;
 }
 void GameView::printPlayer2(const Game& game) {
 	std::cout << game.getPlayer2Score() << std::endl;
 	const Board board2 = game.getPlayer2Board();
-	printRow1(board2, [this](int j, int i) {return selectSinglePlayer2Board(j, i); });
-	printRow2(board2, [this](int j, int i) {return selectSinglePlayer2Board(j, i); }, game.getPlayer2Character());
-	printRow3(board2, [this](int j, int i) {return selectSinglePlayer2Board(j, i); });
+	printRow1(game, board2, [this](int j, int i) {return position->player2SelectCondition(j, i); });
+	printRow2(game, board2, [this](int j, int i) {return position->player2SelectCondition(j, i); }, game.getPlayer2Character());
+	printRow3(game, board2, [this](int j, int i) {return position->player2SelectCondition(j, i); });
 	std::cout << game.getPlayer2Username() << std::endl;
 }
 void GameView::printGame(const Game& game) {
@@ -138,7 +131,7 @@ void GameView::startGame() {
 			position->moveDown();
 			printGame(game);
 		}
-		if (keyPressed(VK_RETURN)) {
+		if (keyPressed(VK_SHIFT)) {
 
 			try {
 				if (position->x() == 3 && !game.getCurrentCharacter().onCooldown() && !usingAbility) {		

@@ -7,18 +7,19 @@
 enum CharacterEnum {
 	ASH,
 	FELIX,
+	COLUMNA,
 };
 
 class Character {
 protected:
 	
-	std::string message;
-	std::string description;
+	const std::string name;
+	const std::string description;
 	int cooldown;
-	int cooldownTime;
-	int selections;
+	const int cooldownTime;
+	const int selections;
 	bool ready;
-	char symbol;
+	const char symbol;
 
 public:
 
@@ -28,7 +29,7 @@ public:
 	const hueFunction selectionColor;
 	
 	Character(const std::string& message, const std::string& description, int cooldownTime, int selections, const colorFunction& color, const hueFunction& selectionColor, char symbol)
-	: message(message), description(description),cooldownTime(cooldownTime), selections(selections), color(color), selectionColor(selectionColor), cooldown(0), ready(false), symbol(symbol)
+	: name(message), description(description),cooldownTime(cooldownTime), selections(selections), color(color), selectionColor(selectionColor), cooldown(0), ready(false), symbol(symbol)
 	{
 		
 	}
@@ -36,7 +37,7 @@ public:
 	virtual void ability() = 0;
 	virtual Position* moveType(const Position* const position) const = 0;
 	Selection selectionType() const { return Selection(selections); }
-	const std::string& getMessage() const { return message; }
+	const std::string& getName() const { return name; }
 	const std::string& getDescription() const{ return description; }
 	virtual void readAndSetParameters(std::istream& in) = 0;
 	virtual void setParameters(const std::vector<int>& params) = 0;

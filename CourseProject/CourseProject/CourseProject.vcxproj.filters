@@ -63,6 +63,9 @@
     <ClCompile Include="SingleBoardPosition.hpp">
       <Filter>Header Files\Positions</Filter>
     </ClCompile>
+    <ClCompile Include="ColumnSingleBoardPosition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.hpp">
@@ -127,6 +130,12 @@
     </ClInclude>
     <ClInclude Include="Selection.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Columna.hpp">
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="ColumnSingleBoardPosition.hpp">
+      <Filter>Header Files\Positions</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

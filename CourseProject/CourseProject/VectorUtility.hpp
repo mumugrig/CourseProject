@@ -24,6 +24,14 @@ public:
 		throw std::invalid_argument("does not exist");
 	}
 
+	template<class T>
+	static const T last(const std::function<bool(const T&)>& f, const std::vector<T> vector) {
+		for (auto i = vector.rbegin(); i != vector.rend(); i++) {
+			if (f(*i)) return *i;
+		}
+		throw std::invalid_argument("does not exist");
+	}
+
 	//returns true if there is an element that fulfills the condition, otherwise returns false
 	template <class T>
 	static bool any(const std::function<bool(const T&)>& f, const std::vector<T>& vector) {
@@ -53,20 +61,6 @@ public:
 		for (size_t i = 0; i < vector.size(); i++) {
 			for (size_t j = 0; j < vector.size()-i-1; j++) {
 				if (f(vector[j + 1], vector[j])) std::swap(vector[j + 1], vector[j]);
-			}
-		}
-		return vector;
-	}
-
-	//sorts the vector using the given condition instead of >
-	//returns a reference to the original vector
-	template <class T>
-	static std::vector<T>& orderByDescending(const std::function<bool(const T&, const T&)>& f,
-		std::vector<T>& vector)
-	{
-		for (size_t i = 0; i < vector.size(); i++) {
-			for (size_t j = 0; j < vector.size() - i - 1; j++) {
-				if (f(vector[j], vector[j+1])) std::swap(vector[j + 1], vector[j]);
 			}
 		}
 		return vector;

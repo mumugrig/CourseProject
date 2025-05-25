@@ -17,4 +17,6 @@ public:
 	virtual void moveDown() = 0;
 	virtual void moveLeft() = 0;
 	virtual void moveRight() = 0;
+	virtual bool player1SelectCondition(int x, int y) { return !_board && y == _y && x == _x; }
+	virtual bool player2SelectCondition(int x, int y) { return _board && y == _y && x == _x; }
 };
