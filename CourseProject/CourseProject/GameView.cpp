@@ -149,6 +149,7 @@ void GameView::startGame() {
 					selectPlace();
 				}
 				printGame(game);
+				Sleep(100);
 			}
 			catch (const std::runtime_error& ex) {}
 		}
@@ -163,12 +164,11 @@ void GameView::startGame() {
 				usingAbility = false;
 			}
 			catch (const std::invalid_argument& ex) {
-				std::cout << ex.what() << std::endl;
+				//std::cout << ex.what() << std::endl;
 				abilitySelection = game.getCurrentCharacter().selectionType();
 			}
 			printGame(game);
 		}
-
 		Sleep(50);
 	}
 	printGame(game);

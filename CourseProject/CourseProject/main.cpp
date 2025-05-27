@@ -136,13 +136,14 @@ void characterSelect(CharacterEnum& characterId) {
 	std::cout << "1. Ash" << std::endl;
 	std::cout << "2. Felix" << std::endl;
 	std::cout << "3. Columna" << std::endl;
-	int input;
+	char input;
 	std::cin >> input;
-	while (input < 1 || input > 3) {
+	while (input < '1' || input > '3') {
 		std::cout << "invalid input" << std::endl;
+		std::cin.ignore(INT_MAX, '\n');
 		std::cin >> input;
 	}
-	characterId = (CharacterEnum)(input-1);
+	characterId = (CharacterEnum)(input - '0' - 1);
 }
 
 void matchHistory(StorageSystem& files, const Player& player) {
@@ -166,23 +167,26 @@ void matchHistory(StorageSystem& files, const Player& player) {
 	}
 	std::cout << "Input anything to go back: ";
 	std::cin >> input;
+	std::cin.ignore(INT_MAX, '\n');
 }
 
 void playerDetails(StorageSystem& files, const Player& player, CharacterEnum& characterId) {
-	int input = 1;
-	while (input != 0) {
+	char input = '1';
+	while (input != '0') {
 		system("cls");
 		std::cout << "1. Select Character" << std::endl;
 		std::cout << "2. Match History" << std::endl;
 		std::cout << "0. Back" << std::endl;
+
 		std::cin >> input;
-		while (input < 0 || input > 2) {
+		while (input < '0' || input > '2') {
 			std::cout << "invalid input" << std::endl;
+			std::cin.ignore(INT_MAX, '\n');
 			std::cin >> input;
 		}
 		switch (input) {
-			case 1:characterSelect(characterId); break;
-			case 2: matchHistory(files, player); break;	
+		case '1':characterSelect(characterId); break;
+		case '2': matchHistory(files, player); break;
 		}
 	}
 	
@@ -190,8 +194,8 @@ void playerDetails(StorageSystem& files, const Player& player, CharacterEnum& ch
 
 
 void mainMenu(StorageSystem& files, const Player& player1, CharacterEnum& characterId1, const Player& player2, CharacterEnum& characterId2) {
-	int input=1;
-	while (input != 0) {
+	char input = '1';
+	while (input != '0') {
 		system("cls");
 		std::cout << "1. Start Game" << std::endl;
 		std::cout << "2. " << player1.getUsername() << " Details" << std::endl;
@@ -199,15 +203,15 @@ void mainMenu(StorageSystem& files, const Player& player1, CharacterEnum& charac
 		std::cout << "0. Exit" << std::endl;
 		
 		std::cin.sync();
-	
 		std::cin >> input;
 
-		while (input < 0 || input > 3) {
+		while (input < '0' || input > '3') {
 			std::cout << "invalid input" << std::endl;
+			std::cin.ignore(INT_MAX, '\n');
 			std::cin >> input;
 		}
 		switch (input) {
-			case 1: 
+		case '1':
 			{
 				char input;
 				std::cout << "While in game use the arrow keys to move across the boards and shift to select" << std::endl;
@@ -217,8 +221,8 @@ void mainMenu(StorageSystem& files, const Player& player1, CharacterEnum& charac
 				files.games().save();
 				break;
 			}
-			case 2: playerDetails(files, player1, characterId1); break;
-			case 3: playerDetails(files, player2, characterId2); break;
+		case '2': playerDetails(files, player1, characterId1); break;
+		case '3': playerDetails(files, player2, characterId2); break;
 		}		
 	}
 	
