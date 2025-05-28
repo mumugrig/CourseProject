@@ -25,6 +25,18 @@
     <Filter Include="Header Files\Positions">
       <UniqueIdentifier>{c30df6f7-8e7a-4019-aca0-bce113b026bf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Characters">
+      <UniqueIdentifier>{bfd72368-7185-4b82-be18-7b82ff1f3a78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Positions">
+      <UniqueIdentifier>{6f269133-80c4-48e6-ba3d-e758bfd3f6cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Storage">
+      <UniqueIdentifier>{8ef2b1e1-cfa5-4480-a9d6-f5eae4e9e661}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Commands">
+      <UniqueIdentifier>{2b0295ec-020a-4b53-b72d-096779d3c7ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Player.cpp">
@@ -39,12 +51,6 @@
     <ClCompile Include="libraries\pcg_basic.c">
       <Filter>Libraries</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -54,17 +60,38 @@
     <ClCompile Include="GameView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SingleBoardPosition.cpp">
+    <ClCompile Include="Selection.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Die.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ash.cpp">
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Columna.cpp">
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="Felix.cpp">
+      <Filter>Source Files\Characters</Filter>
     </ClCompile>
     <ClCompile Include="BothBoardsPosition.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SingleBoardPosition.hpp">
-      <Filter>Header Files\Positions</Filter>
+      <Filter>Source Files\Positions</Filter>
     </ClCompile>
     <ClCompile Include="ColumnSingleBoardPosition.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Positions</Filter>
+    </ClCompile>
+    <ClCompile Include="Position.cpp">
+      <Filter>Source Files\Positions</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Source Files\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerManager.cpp">
+      <Filter>Source Files\Storage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +163,12 @@
     </ClInclude>
     <ClInclude Include="ColumnSingleBoardPosition.hpp">
       <Filter>Header Files\Positions</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.hpp">
+      <Filter>Header Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintMainMenu.hpp">
+      <Filter>Header Files\Commands</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

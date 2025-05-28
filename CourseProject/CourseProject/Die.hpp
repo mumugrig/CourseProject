@@ -1,35 +1,23 @@
 #pragma once
 #include "Libraries/pcg_basic.h"
-#include <time.h>
+#include <ctime>
 
 class Die {
 	int value;
 	pcg32_random_t rng;
 
-	void seedRandom()
-	{
-		pcg32_srandom_r(&rng, time(0), (size_t)this);
-	}
+	void seedRandom();
 
 public:
-	Die() : value(0) {
-		seedRandom();
-	}
+	Die();
 
-	Die(const Die& other) : value(other.value) {
-		seedRandom();
-	}
+	Die(const Die& other);
 
 	Die& operator=(const Die&) = delete;
 
-	void rollDie()
-	{
-		value = pcg32_boundedrand_r(&rng, 6) + 1;
-	}
+	void rollDie();
 
-	int getValue() const {
-		return value;
-	}
+	int getValue() const;
 
 	
 };

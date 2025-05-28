@@ -4,17 +4,15 @@
 void PlayerManager::serialize(const Player& element, std::ostream& out)
 {
 	out << element.getId() << ' '
-		<< element.getUsername() << ' '
-		<< element.getHighScore() << std::endl;
+		<< element.getUsername() << std::endl;
 }
 
 Player* PlayerManager::deserialize(std::istream& in)
 {
 	unsigned int id;
 	std::string name;
-	unsigned int highScore;
-	in >> id >> name >> highScore;
-	return new Player(id, name, highScore);
+	in >> id >> name;
+	return new Player(id, name);
 }
 
 void PlayerManager::save()

@@ -35,7 +35,7 @@ void Game::updateScore()
     score2 = board2.score();
 }
 
-void Game::removeFromEnemyBoard(int column)
+void Game::updateEnemyBoard(int column)
 {
     if (turn) {
         for (int i = 0; i < 3; i++) {
@@ -164,8 +164,7 @@ const std::string& Game::getWinnerUsername() const
 void Game::place(int x, int y)
 {
     place(turn, x, y);
-
-    removeFromEnemyBoard(x);
+    updateEnemyBoard(x);
 
     updateScore();
     passTurn();

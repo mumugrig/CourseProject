@@ -1,17 +1,13 @@
 #pragma once
-#include "SingleBoardPosition.hpp"
+#include "Position.hpp"
 
-class ColumnSingleBoardPosition : public SingleBoardPosition{
+class ColumnSingleBoardPosition : public Position {
 public:
-	ColumnSingleBoardPosition() : SingleBoardPosition() {}
-	ColumnSingleBoardPosition(const Position& other) : SingleBoardPosition(other) {}
+	ColumnSingleBoardPosition();
+	ColumnSingleBoardPosition(const Position& other);
 
-	bool player1SelectCondition(int x, int y) override {
-		return !_board && x == _x;
-	}
+	bool player1SelectCondition(int x, int y) override;
 
-	bool player2SelectCondition(int x, int y) override {
-		return _board && x == _x;
-	}
+	bool player2SelectCondition(int x, int y) override;
 
 };

@@ -131,9 +131,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Ash.cpp" />
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="BothBoardsPosition.cpp" />
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Columna.cpp" />
     <ClCompile Include="ColumnSingleBoardPosition.cpp" />
+    <ClCompile Include="Die.cpp" />
+    <ClCompile Include="Felix.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameView.cpp" />
@@ -141,8 +146,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerManager.cpp" />
-    <ClCompile Include="SingleBoardPosition.cpp" />
-    <ClCompile Include="SingleBoardPosition.hpp" />
+    <ClCompile Include="Position.cpp" />
+    <ClCompile Include="Selection.cpp" />
     <ClCompile Include="test.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
@@ -155,6 +160,7 @@
     <ClInclude Include="Character.hpp" />
     <ClInclude Include="Columna.hpp" />
     <ClInclude Include="ColumnSingleBoardPosition.hpp" />
+    <ClInclude Include="Command.hpp" />
     <ClInclude Include="Die.hpp" />
     <ClInclude Include="Felix.hpp" />
     <ClInclude Include="FileManager.hpp" />
@@ -167,6 +173,7 @@
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="PlayerManager.hpp" />
     <ClInclude Include="Position.hpp" />
+    <ClInclude Include="PrintMainMenu.hpp" />
     <ClInclude Include="Selection.hpp" />
     <ClInclude Include="Serializable.hpp" />
     <ClInclude Include="Storable.hpp" />

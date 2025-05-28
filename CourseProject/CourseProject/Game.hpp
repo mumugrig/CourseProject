@@ -29,7 +29,7 @@ class Game : public Storable<unsigned int> {
 	Game* clone() const override;
 	Game* cloneWithId(unsigned int id) const override;
 	void updateScore();
-	void removeFromEnemyBoard(int column);
+	void updateEnemyBoard(int column);
 	void initializeCharacter1(CharacterEnum character);
 	void initializeCharacter2(CharacterEnum character);
 public:

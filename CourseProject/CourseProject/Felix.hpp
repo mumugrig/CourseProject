@@ -1,7 +1,7 @@
 #pragma once
 #include "Character.hpp"
 #include "Die.hpp"
-#include "SingleBoardPosition.hpp"
+#include "Position.hpp"
 
 class Felix : public Character {
 
@@ -9,19 +9,11 @@ class Felix : public Character {
 
 public:
 
-	Felix(Die& die) : Character("Felix", "Rerolls your die", 2, 0, dye::green<std::string>, hue::bright_white_on_green, '?'), die(die) {}
+	Felix(Die& die);
 
-	void ability() override {
-		if (!onCooldown()) {
-			die.rollDie();
-			setCooldown();
-		}
-		else {
-			throw std::runtime_error("not ready");
-		}
-	}
-	Position* moveType(const Position* const position) const override { return new SingleBoardPosition(*position); }
+	void ability() override;
+	Position* moveType(const Position* const position) const override;
 
-	void readAndSetParameters(std::istream& in) override {}
-	void setParameters(const std::vector<int>& params) override {}
+	void readAndSetParameters(std::istream& in) override;
+	void setParameters(const std::vector<int>& params) override;
 };

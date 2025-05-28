@@ -6,17 +6,19 @@ protected:
 	int _y;
 	bool _board;
 public:
-	Position() : _x(0), _y(0), _board(false) {}
 
-	int x() const { return _x; }
-	int y() const{ return _y; }
-	bool board() const { return _board; }
-	void setBoard(bool value) { _board = value; }
+	Position();
 
-	virtual void moveUp() = 0;
-	virtual void moveDown() = 0;
-	virtual void moveLeft() = 0;
-	virtual void moveRight() = 0;
-	virtual bool player1SelectCondition(int x, int y) { return !_board && y == _y && x == _x; }
-	virtual bool player2SelectCondition(int x, int y) { return _board && y == _y && x == _x; }
+	int x() const;
+	int y() const;
+	bool board() const;
+	void setBoard(bool value);
+
+	virtual void moveUp();
+	virtual void moveDown();
+	virtual void moveLeft();
+	virtual void moveRight();
+	virtual bool player1SelectCondition(int x, int y);
+	virtual bool player2SelectCondition(int x, int y);
 };
+

@@ -1,10 +1,11 @@
-1 player1 0
-2 player2 0
-3 1 0
-4 mumugrig 0
-5 aaabc 0
-6 p1 0
-7 p2 0
-8 p` 0
-9 p 0
-10 pl 0
+1 player1
+2 player2
+3 1
+4 mumugrig
+5 aaabc
+6 p1
+7 p2
+8 p`
+9 p
+10 pl
+11 player
