@@ -146,10 +146,9 @@ void GameView::startGame() {
 					delete position;
 					position = newPosition;
 					usingAbility() = true;
-					abilitySelection = game.getCurrentCharacter().selectionType();
 				}
-				else if (usingAbility() && !abilitySelection.isReady()) {
-					abilitySelection.push(position->x(), position->y(), position->board());
+				else if (usingAbility() && !game.getCurrentCharacter().selection.isReady()) {
+					game.pushCharacterParameters(position->x(), position->y(), position->board());
 				}	
 				else {
 					selectPlace();
@@ -159,9 +158,9 @@ void GameView::startGame() {
 			}
 			catch (const std::runtime_error& ex) {}
 		}
-		if (usingAbility() && abilitySelection.isReady()) {
+		if (usingAbility() && game.getCurrentCharacter().selection.isReady()) {
 			try {
-				game.setCharacterParameters(abilitySelection.getParameters());
+				
 				game.useAbility();
 				Position* newPosition = new Position(*position);
 				delete position;
@@ -171,7 +170,8 @@ void GameView::startGame() {
 			}
 			catch (const std::invalid_argument& ex) {
 				//std::cout << ex.what() << std::endl;
-				abilitySelection = game.getCurrentCharacter().selectionType();
+				game.resetCharacterParameters();
+				
 			}
 			printGame(game);
 		}

@@ -13,5 +13,7 @@ public:
 
 	void push(int x, int y, bool board);
 
+	void reset();
+
 	const std::vector<int>& getParameters() const;
 };

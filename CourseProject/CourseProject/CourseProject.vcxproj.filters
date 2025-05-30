@@ -93,6 +93,9 @@
     <ClCompile Include="PlayerManager.cpp">
       <Filter>Source Files\Storage</Filter>
     </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.hpp">
@@ -169,6 +172,9 @@
     </ClInclude>
     <ClInclude Include="PrintMainMenu.hpp">
       <Filter>Header Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -3,7 +3,7 @@
 #include <functional>
 #include <stdexcept>
 
-static class VectorUtility {
+class VectorUtility {
 public:
 	//returns a filtered copy of the original vector
 	template <class T>
@@ -17,7 +17,7 @@ public:
 
 	//returns first element that fulfills the condition otherwise throws
 	template <class T>
-	static const T first(const std::function<bool(const T&)>& f, const std::vector<T> vector) {
+	static const T first(const std::function<bool(const T&)>& f, const std::vector<T>& vector) {
 		for (const T& el : vector) {
 			if (f(el)) return el;
 		}
@@ -25,7 +25,7 @@ public:
 	}
 
 	template<class T>
-	static const T last(const std::function<bool(const T&)>& f, const std::vector<T> vector) {
+	static const T last(const std::function<bool(const T&)>& f, const std::vector<T>& vector) {
 		for (auto i = vector.rbegin(); i != vector.rend(); i++) {
 			if (f(*i)) return *i;
 		}
@@ -42,7 +42,7 @@ public:
 	}
 
 	template<class T, class U>
-	static std::vector<U> map(const std::function<const U& (const T&)>& f,
+	static std::vector<U> map(const std::function<U(const T&)>& f,
 							const std::vector<T>& vector) 
 	{
 		std::vector<U> result;

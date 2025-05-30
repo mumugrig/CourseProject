@@ -144,6 +144,7 @@
     <ClCompile Include="GameView.cpp" />
     <ClCompile Include="libraries\pcg_basic.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerManager.cpp" />
     <ClCompile Include="Position.cpp" />
@@ -170,6 +171,7 @@
     <ClInclude Include="Libraries\color.hpp" />
     <ClInclude Include="libraries\doctest.h" />
     <ClInclude Include="libraries\pcg_basic.h" />
+    <ClInclude Include="MainMenu.hpp" />
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="PlayerManager.hpp" />
     <ClInclude Include="Position.hpp" />

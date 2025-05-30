@@ -17,4 +17,10 @@ void Selection::push(int x, int y, bool board) {
 	}
 }
 
+void Selection::reset()
+{
+	n = params.size() / 3;
+	params.clear();
+}
+
 const std::vector<int>& Selection::getParameters() const { return params; }

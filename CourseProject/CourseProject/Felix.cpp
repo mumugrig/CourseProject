@@ -1,11 +1,18 @@
 #include "Felix.hpp"
 
-Felix::Felix(Die& die) : Character("Felix", "Rerolls your die", 2, 0, dye::green<std::string>, hue::bright_white_on_green, '?'), die(die) {}
+Felix::Felix(Die& die) : Character("Felix", "Rerolls your die", 2, 0, dye::green<std::string>, hue::bright_white_on_green, '?'), die(die), count(0) {}
 
 void Felix::ability() {
 	if (!onCooldown()) {
-		die.rollDie();
-		setCooldown();
+		++count;
+		if (count == 3) {
+			die.rollInBounds(5, 6);
+			count = 0;
+		}
+		else {
+			die.rollDie();
+		}
+		setCooldown();	
 	}
 	else {
 		throw std::runtime_error("not ready");
@@ -14,6 +21,3 @@ void Felix::ability() {
 
 Position* Felix::moveType(const Position* const position) const { return new Position(*position); }
 
-void Felix::readAndSetParameters(std::istream& in) {}
-
-void Felix::setParameters(const std::vector<int>& params) {}

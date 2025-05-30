@@ -171,14 +171,14 @@ void Game::place(int x, int y)
 
 }
 
-void Game::readAndSetCharacterParameters(std::istream& in)
+void Game::pushCharacterParameters(int x, int y, bool board)
 {
-    turn ? character2->readAndSetParameters(in) : character1->readAndSetParameters(in);
+    turn ? character2->pushParameters(x,y,board) : character1->pushParameters(x,y,board);
 }
 
-void Game::setCharacterParameters(std::vector<int> params)
+void Game::resetCharacterParameters()
 {
-    turn ? character2->setParameters(params) : character1->setParameters(params);
+    turn ? character2->resetSelection() : character1->resetSelection();
 }
 
 const Character& Game::getCurrentCharacter() const

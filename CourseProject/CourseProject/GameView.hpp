@@ -17,8 +17,6 @@ class GameView {
 
 	bool& usingAbility() { return (game.getTurn() ? usingAbility2 : usingAbility1); }
 
-	Selection abilitySelection;
-
 	bool keyPressed(char key);
 
 	void printLine();

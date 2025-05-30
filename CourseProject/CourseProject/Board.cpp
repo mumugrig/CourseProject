@@ -43,7 +43,7 @@ Board::Board()
 	}
 }
 
-Board::Board(const int** matrix)
+Board::Board(const int matrix[3][3])
 {
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 3; j++) {
@@ -95,7 +95,7 @@ void Board::clearValue(int x, int y)
 	if (inBounds(x, y)) {
 		board[y][x] = 0;
 	}
-	else throw "invalid position";
+	else throw std::runtime_error("invalid position");
 }
 
 int Board::getValue(int x, int y) const

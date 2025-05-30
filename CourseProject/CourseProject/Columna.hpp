@@ -7,6 +7,7 @@ class Columna : public Character {
 
 	Board& enemyBoard;
 	int x;
+	void initializeParameters() override;
 public:
 
 	Columna(Board& enemyBoard);
@@ -14,9 +15,5 @@ public:
 	void ability() override;
 
 	ColumnSingleBoardPosition* moveType(const Position* const position) const override;
-
-	 void readAndSetParameters(std::istream& in) override;
-
-	 void setParameters(const std::vector<int>& params) override;
 
 };

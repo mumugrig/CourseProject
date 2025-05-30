@@ -16,7 +16,7 @@ public:
 	Die& operator=(const Die&) = delete;
 
 	void rollDie();
-
+	void rollInBounds(int min, int max);
 	int getValue() const;
 
 	

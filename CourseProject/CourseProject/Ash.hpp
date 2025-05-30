@@ -11,16 +11,11 @@ class Ash : public Character {
 	Board& player1Board;
 	Board& player2Board;
 	Character*& opponentCharacter;
+	void initializeParameters() override;
 public:
 	Ash(Board& player1Board, Board& player2Board, Character*& enemyCharacter, bool player);
 
 	BothBoardsPosition* moveType(const Position* const position) const override;
-
-
-
-	void readAndSetParameters(std::istream& in);
-
-	void setParameters(const std::vector<int>& params) override;
 
 	void ability() override;
 };

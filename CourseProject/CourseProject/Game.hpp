@@ -23,6 +23,7 @@ class Game : public Storable<unsigned int> {
 	int score2;
 	
 	bool turn;
+
 	void passTurn();
 	
 	void place(bool board, int x, int y);
@@ -52,8 +53,8 @@ public:
 	const std::string& getWinnerUsername() const;
 
 	void place(int x, int y);
-	void readAndSetCharacterParameters(std::istream& in);
-	void setCharacterParameters(std::vector<int> params);
+	void pushCharacterParameters(int x, int y, bool board);
+	void resetCharacterParameters();
 	const Character& getCurrentCharacter() const;
 	const Board& getCurrentBoard() const;
 	void useAbility();
