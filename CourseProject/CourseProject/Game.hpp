@@ -5,6 +5,7 @@
 #include "Ash.hpp"
 #include "Felix.hpp"
 #include "Columna.hpp"
+#include "Oliver.hpp"
 #include "Libraries/pcg_basic.h"
 #include "Die.hpp"
 
@@ -53,7 +54,7 @@ public:
 	const std::string& getWinnerUsername() const;
 
 	void place(int x, int y);
-	void pushCharacterParameters(int x, int y, bool board);
+	void pushCharacterParameters(const Point& point);
 	void resetCharacterParameters();
 	const Character& getCurrentCharacter() const;
 	const Board& getCurrentBoard() const;

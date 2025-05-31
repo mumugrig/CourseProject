@@ -14,6 +14,6 @@ public:
 
 	void ability() override;
 
-	ColumnSingleBoardPosition* moveType(const Position* const position) const override;
+	ColumnSingleBoardPosition* moveType(const Position* position) const override;
 
 };

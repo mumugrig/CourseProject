@@ -145,9 +145,11 @@
     <ClCompile Include="libraries\pcg_basic.c" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="Oliver.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerManager.cpp" />
     <ClCompile Include="Position.cpp" />
+    <ClCompile Include="RetainBothBoardsPosition.cpp" />
     <ClCompile Include="Selection.cpp" />
     <ClCompile Include="test.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -161,7 +163,6 @@
     <ClInclude Include="Character.hpp" />
     <ClInclude Include="Columna.hpp" />
     <ClInclude Include="ColumnSingleBoardPosition.hpp" />
-    <ClInclude Include="Command.hpp" />
     <ClInclude Include="Die.hpp" />
     <ClInclude Include="Felix.hpp" />
     <ClInclude Include="FileManager.hpp" />
@@ -172,10 +173,12 @@
     <ClInclude Include="libraries\doctest.h" />
     <ClInclude Include="libraries\pcg_basic.h" />
     <ClInclude Include="MainMenu.hpp" />
+    <ClInclude Include="Oliver.hpp" />
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="PlayerManager.hpp" />
+    <ClInclude Include="Point.hpp" />
     <ClInclude Include="Position.hpp" />
-    <ClInclude Include="PrintMainMenu.hpp" />
+    <ClInclude Include="RetainBothBoardsPosition.hpp" />
     <ClInclude Include="Selection.hpp" />
     <ClInclude Include="Serializable.hpp" />
     <ClInclude Include="Storable.hpp" />

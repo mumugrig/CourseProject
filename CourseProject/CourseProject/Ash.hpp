@@ -4,9 +4,7 @@
 
 
 class Ash : public Character {
-	int x;
-	int y;
-	bool board;
+	Point target;
 	const bool player;
 	Board& player1Board;
 	Board& player2Board;
@@ -15,7 +13,7 @@ class Ash : public Character {
 public:
 	Ash(Board& player1Board, Board& player2Board, Character*& enemyCharacter, bool player);
 
-	BothBoardsPosition* moveType(const Position* const position) const override;
+	BothBoardsPosition* moveType(const Position* position) const override;
 
 	void ability() override;
 };

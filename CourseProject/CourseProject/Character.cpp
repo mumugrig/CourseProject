@@ -11,7 +11,7 @@ const std::string& Character::getName() const { return name; }
 
 const std::string& Character::getDescription() const { return description; }
 
-void Character::pushParameters(int x, int y, bool board) { selection.push(x, y, board); }
+void Character::pushParameters(const Point& point) { selection.push(point); }
 
 int Character::getCooldown() const { return cooldown; }
 

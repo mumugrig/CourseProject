@@ -43,7 +43,7 @@ Board::Board()
 	}
 }
 
-Board::Board(const int matrix[3][3])
+Board::Board(const int** matrix)
 {
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 3; j++) {

@@ -3,7 +3,7 @@
 #include "VectorUtility.hpp"
 
 class MainMenu {
-public:
+
 	static void printLine();
 
 	static void printRow1(const Game& game, const Board& gameBoard);
@@ -13,20 +13,18 @@ public:
 	static void printRow3(const Game& game, const Board& gameBoard);
 
 	static void printPlayer1(const Game& game);
-	static void printPlayer2(const Game& game);
-	static void printGame(const Game& game, const Player& player, bool withConclusion);
 
+	static void printPlayer2(const Game& game);
+
+	static void printGame(const Game& game, const Player& player, bool withConclusion);
 
 	static std::string inputUsername();
 
 	static void readPlayer(StorageSystem& files, Player& player, std::string username);
 
-	static void choosePlayers(StorageSystem& files, Player& player1, Player& player2);
-
 	static void startGame(StorageSystem& files, Game& game);
 
 	static void newGame(StorageSystem& files, const Player& player1, const CharacterEnum& characterId1, const Player& player2, const CharacterEnum& characterId2);
-
 
 	static void characterSelect(CharacterEnum& characterId);
 
@@ -36,6 +34,9 @@ public:
 
 	static void loadGame(StorageSystem& files, const Player& player1, const Player& player2);
 
+public:
+
+	static void choosePlayers(StorageSystem& files, Player& player1, Player& player2);
 	static void printMenu(StorageSystem& files, const Player& player1, CharacterEnum& characterId1, const Player& player2, CharacterEnum& characterId2);
 
 

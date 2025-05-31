@@ -2,16 +2,14 @@
 
 void Ash::initializeParameters()
 {
-	x = selection.getParameters()[0];
-	y = selection.getParameters()[1];
-	board = selection.getParameters()[2];
+	target = selection.getParameters()[0];
 }
 
 Ash::Ash(Board& player1Board, Board& player2Board, Character*& enemyCharacter, bool player) : Character(
 	"Ash",
-	"Destroy one die from any board.", 4, 1, dye::red_on_black<std::string>, hue::black_on_light_red, 'X'), x(0), y(0), board(0), player1Board(player1Board), player2Board(player2Board), opponentCharacter(enemyCharacter), player(player) {}
+	"Destroy one die from any board.", 4, 1, dye::red_on_black<std::string>, hue::black_on_light_red, 'X'), target({0,0,0}), player1Board(player1Board), player2Board(player2Board), opponentCharacter(enemyCharacter), player(player) {}
 
- BothBoardsPosition* Ash::moveType(const Position* const position) const {
+ BothBoardsPosition* Ash::moveType(const Position* position) const {
 	return new BothBoardsPosition(*position);
 }
 
@@ -20,12 +18,12 @@ Ash::Ash(Board& player1Board, Board& player2Board, Character*& enemyCharacter, b
  void Ash::ability() {
 	if (selection.isReady() && !onCooldown()) {
 		initializeParameters();
-		if (x != 3) {
-			board ? player2Board.clearValue(x, y) : player1Board.clearValue(x, y);
+		if (target.x != 3) {
+			target.board ? player2Board.clearValue(target.x, target.y) : player1Board.clearValue(target.x, target.y);
 		}
-		else if (Board::inBounds(0, y) && board!=player) {
+		else if (Board::inBounds(0, target.y) && target.board!=player) {
 			opponentCharacter->setCooldown();
-			cooldownTime = max(opponentCharacter->getCooldownTime() + 1, cooldownTime);
+			cooldownTime = min(max(opponentCharacter->getCooldownTime() + 1, cooldownTime),9);
 		}
 		else throw std::invalid_argument("invalid position");
 		selection.reset();

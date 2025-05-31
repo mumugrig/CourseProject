@@ -34,9 +34,6 @@
     <Filter Include="Source Files\Storage">
       <UniqueIdentifier>{8ef2b1e1-cfa5-4480-a9d6-f5eae4e9e661}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Commands">
-      <UniqueIdentifier>{2b0295ec-020a-4b53-b72d-096779d3c7ce}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Player.cpp">
@@ -95,6 +92,12 @@
     </ClCompile>
     <ClCompile Include="MainMenu.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Oliver.cpp">
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="RetainBothBoardsPosition.cpp">
+      <Filter>Source Files\Positions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -167,14 +170,17 @@
     <ClInclude Include="ColumnSingleBoardPosition.hpp">
       <Filter>Header Files\Positions</Filter>
     </ClInclude>
-    <ClInclude Include="Command.hpp">
-      <Filter>Header Files\Commands</Filter>
-    </ClInclude>
-    <ClInclude Include="PrintMainMenu.hpp">
-      <Filter>Header Files\Commands</Filter>
-    </ClInclude>
     <ClInclude Include="MainMenu.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Oliver.hpp">
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="RetainBothBoardsPosition.hpp">
+      <Filter>Header Files\Positions</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.hpp">
+      <Filter>Header Files\Positions</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

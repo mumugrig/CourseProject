@@ -8,19 +8,17 @@ bool Selection::isReady() const {
 	return n == 0;
 }
 
-void Selection::push(int x, int y, bool board) {
+void Selection::push(const Point& point) {
 	if (n != 0) {
-		params.push_back(x);
-		params.push_back(y);
-		params.push_back(board);
+		params.push_back(point);
 		n--;
 	}
 }
 
 void Selection::reset()
 {
-	n = params.size() / 3;
+	n = params.size();
 	params.clear();
 }
 
-const std::vector<int>& Selection::getParameters() const { return params; }
+const std::vector<Point>& Selection::getParameters() const { return params; }

@@ -2,7 +2,7 @@
 
 void Columna::initializeParameters()
 {
-	x = selection.getParameters()[0];
+	x = selection.getParameters()[0].x;
 	if (!Board::inBounds(x,0)) throw std::invalid_argument("invalid position");
 }
 

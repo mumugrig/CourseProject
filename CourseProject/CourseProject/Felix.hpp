@@ -7,8 +7,9 @@ class Felix : public Character {
 
 	Die& die;
 	int count;
+	void initializeParameters() override {}
 public:
 	Felix(Die& die);
 	void ability() override;
-	Position* moveType(const Position* const position) const override;
+	Position* moveType(const Position* position) const override;
 };

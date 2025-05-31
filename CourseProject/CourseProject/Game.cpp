@@ -59,6 +59,7 @@ void Game::initializeCharacter1(CharacterEnum character)
     case ASH: character1 = new Ash(board1, board2, character2, 0); break;
     case FELIX: character1 = new Felix(die); break;
     case COLUMNA: character1 = new Columna(board2); break;
+    case OLIVER: character1 = new Oliver(board1, board2); break;
     }
 }
 
@@ -67,7 +68,8 @@ void Game::initializeCharacter2(CharacterEnum character)
     switch (character) {
     case ASH: character2 = new Ash(board1, board2, character1, 1); break;
     case FELIX: character2 = new Felix(die); break;
-    case COLUMNA: character2 = new Columna(board1); break;
+    case COLUMNA: character2 = new Columna(board1); break; 
+    case OLIVER: character1 = new Oliver(board1, board2); break;
     }
 }
 
@@ -171,9 +173,9 @@ void Game::place(int x, int y)
 
 }
 
-void Game::pushCharacterParameters(int x, int y, bool board)
+void Game::pushCharacterParameters(const Point& point)
 {
-    turn ? character2->pushParameters(x,y,board) : character1->pushParameters(x,y,board);
+    turn ? character2->pushParameters(point) : character1->pushParameters(point);
 }
 
 void Game::resetCharacterParameters()

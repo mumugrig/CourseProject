@@ -108,15 +108,7 @@ void MainMenu::readPlayer(StorageSystem& files, Player& player, std::string user
 	}
 }
 
-void MainMenu::choosePlayers(StorageSystem& files, Player& player1, Player& player2) {
-	std::cout << "Enter username for Player1: ";
-	std::string username = inputUsername();
-	readPlayer(files, player1, username);
 
-	std::cout << "Enter username for Player2: ";
-	username = inputUsername();
-	readPlayer(files, player2, username);
-}
 
 void MainMenu::startGame(StorageSystem& files, Game& game) {
 	GameView view(game, files);
@@ -144,9 +136,10 @@ void MainMenu::characterSelect(CharacterEnum& characterId) {
 	std::cout << "1. Ash" << std::endl;
 	std::cout << "2. Felix" << std::endl;
 	std::cout << "3. Columna" << std::endl;
+	std::cout << "4. Oliver" << std::endl;
 	char input;
 	std::cin >> input;
-	while (input < '1' || input > '3') {
+	while (input < '1' || input > '4') {
 		std::cout << "invalid input" << std::endl;
 		std::cin.ignore(INT_MAX, '\n');
 		std::cin >> input;
@@ -177,11 +170,13 @@ void MainMenu::matchHistory(StorageSystem& files, const Player& player) {
 
 		int counter = 0;
 		int previousCounter = 1;
+		int pageSize = 2;
 		while (input != '0') {
 			if (counter != previousCounter) {
 				previousCounter = counter;
 				system("cls");
-				for (int i = 4 * counter; i < 4 * (counter + 1) && i < playerGames.size(); i++) {
+				
+				for (int i = pageSize * counter; i < pageSize * (counter + 1) && i < playerGames.size(); i++) {
 					std::cout << playerGames.size() - i << "----------------------------------------------" << std::endl;
 					printGame(*playerGames[playerGames.size() - i - 1], player, true);
 
@@ -194,7 +189,7 @@ void MainMenu::matchHistory(StorageSystem& files, const Player& player) {
 			std::cin.ignore(INT_MAX, '\n');
 			switch (input) {
 			case 'n': {
-				if (counter + 1 <= playerGames.size() / 4) counter++;
+				if (counter + 2 <= playerGames.size() / pageSize) counter++;
 				break;
 			}
 			case 'p': {
@@ -255,6 +250,17 @@ void MainMenu::loadGame(StorageSystem& files, const Player& player1, const Playe
 	else {
 		startGame(files, *(savedGames[input - 1]));
 	}
+}
+
+
+void MainMenu::choosePlayers(StorageSystem& files, Player& player1, Player& player2) {
+	std::cout << "Enter username for Player1: ";
+	std::string username = inputUsername();
+	readPlayer(files, player1, username);
+
+	std::cout << "Enter username for Player2: ";
+	username = inputUsername();
+	readPlayer(files, player2, username);
 }
 
 void MainMenu::printMenu(StorageSystem& files, const Player& player1, CharacterEnum& characterId1, const Player& player2, CharacterEnum& characterId2) {

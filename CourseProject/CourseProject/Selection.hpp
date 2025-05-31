@@ -1,8 +1,9 @@
 #pragma once
 #include <vector>
+#include "Point.hpp"
 
 class Selection {
-	std::vector<int> params;
+	std::vector<Point> params;
 	int n;
 	
 public:
@@ -11,9 +12,9 @@ public:
 
 	bool isReady() const;
 
-	void push(int x, int y, bool board);
+	void push(const Point& point);
 
 	void reset();
 
-	const std::vector<int>& getParameters() const;
+	const std::vector<Point>& getParameters() const;
 };

@@ -19,5 +19,5 @@ void Felix::ability() {
 	}
 }
 
-Position* Felix::moveType(const Position* const position) const { return new Position(*position); }
+Position* Felix::moveType(const Position* position) const { return new Position(*position); }
 

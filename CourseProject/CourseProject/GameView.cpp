@@ -148,7 +148,7 @@ void GameView::startGame() {
 					usingAbility() = true;
 				}
 				else if (usingAbility() && !game.getCurrentCharacter().selection.isReady()) {
-					game.pushCharacterParameters(position->x(), position->y(), position->board());
+					game.pushCharacterParameters(position->getPoint());
 				}	
 				else {
 					selectPlace();
@@ -169,7 +169,8 @@ void GameView::startGame() {
 				usingAbility() = false;
 			}
 			catch (const std::invalid_argument& ex) {
-				//std::cout << ex.what() << std::endl;
+				std::cout << ex.what() << std::endl;
+				system("pause");
 				game.resetCharacterParameters();
 				
 			}

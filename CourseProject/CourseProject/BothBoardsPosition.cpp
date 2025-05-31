@@ -2,30 +2,30 @@
 
  void BothBoardsPosition::moveUp()
 {
-	_y--;
-	if (_y < 0) {
-		_board = !_board;
-		_y = 2;
+	point.y--;
+	if (point.y < 0) {
+		point.board = !point.board;
+		point.y = 2;
 	}
 }
 
  void BothBoardsPosition::moveDown()
 {
-	_y++;
-	if (_y > 2) {
-		_board = !_board;
-		_y = 0;
+	point.y++;
+	if (point.y > 2) {
+		point.board = !point.board;
+		point.y = 0;
 	}
 }
 
  void BothBoardsPosition::moveLeft()
 {
-	_x--;
-	if (_x < 0) _x = 3;
+	point.x--;
+	if (point.x < 0) point.x = 3;
 }
 
  void BothBoardsPosition::moveRight()
 {
-	_x++;
-	if (_x > 3) _x = 0;
+	point.x++;
+	if (point.x > 3) point.x = 0;
 }
