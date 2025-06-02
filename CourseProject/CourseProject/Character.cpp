@@ -13,6 +13,13 @@ const std::string& Character::getDescription() const { return description; }
 
 void Character::pushParameters(const Point& point) { selection.push(point); }
 
+
+/**
+* @brief Resets the character's selection to empty.
+*/
+
+inline void Character::resetSelection() { selection.reset(); }
+
 int Character::getCooldown() const { return cooldown; }
 
 int Character::getCooldownTime() const { return cooldownTime; }

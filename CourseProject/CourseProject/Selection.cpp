@@ -1,3 +1,4 @@
+
 #include "Selection.hpp"
 
 Selection::Selection() : n(0) {}
@@ -17,7 +18,7 @@ void Selection::push(const Point& point) {
 
 void Selection::reset()
 {
-	n = params.size();
+	n += params.size();
 	params.clear();
 }
 

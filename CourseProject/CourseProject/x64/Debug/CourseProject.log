@@ -1,126 +1,1370 @@
-﻿  MainMenu.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\limits.h(70,5): warning C4668: '__STDC_WANT_SECURE_LIB__' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Serializable.hpp(7,1): warning C5204: 'Serializable': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1): warning C4820: 'Storable<unsigned int>': '4' bytes padding added after data member 'Storable<unsigned int>::id'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(6,46): message : see reference to class template instantiation 'Storable<unsigned int>' being compiled
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(39,1): warning C4820: 'FileManager<Player,unsigned int>': '7' bytes padding added after data member 'FileManager<Player,unsigned int>::auto_inc'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(5,64): message : see reference to class template instantiation 'FileManager<Player,unsigned int>' being compiled
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(38,3): warning C4265: 'FileManager<Player,unsigned int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4625: 'PlayerManager': copy constructor was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C5026: 'PlayerManager': move constructor was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4626: 'PlayerManager': assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C5027: 'PlayerManager': move assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4265: 'PlayerManager': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(25,1): warning C4820: 'Board': '4' bytes padding added after data member 'Board::board'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(25,1): warning C5204: 'Board': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winbase.h(7723,48): warning C5039: 'TpSetCallbackCleanupGroup': pointer or reference to potentially throwing function passed to 'extern "C"' function under -EHc. Undefined behavior may occur if this function throws an exception.
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11004,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11010,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11015,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11020,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11027,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11032,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11043,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11048,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11054,22): warning C4668: '_WIN32_WINNT_WIN10_RS3' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11062,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11066,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11070,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11075,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11078,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11293,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(11317,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(14840,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(15042,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(15145,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(15241,21): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(15345,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(16089,23): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(16177,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(16303,22): warning C4668: '_WIN32_WINNT_WIN10_RS3' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(16452,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(16465,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um\winioctl.h(16694,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Libraries\color.hpp(121,71): warning C4242: 'argument': conversion from 'int' to 'WORD', possible loss of data
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Libraries\color.hpp(121,71): warning C4365: 'argument': conversion from 'int' to 'WORD', signed/unsigned mismatch
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Point.hpp(14,1): warning C4820: 'Point': '3' bytes padding added after data member 'Point::board'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Position.hpp(26,1): warning C4820: 'Position': '4' bytes padding added after data member 'Position::point'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Selection.hpp(20,1): warning C4820: 'Selection': '4' bytes padding added after data member 'Selection::n'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(27,22): warning C4820: 'Character': '7' bytes padding added after data member 'Character::symbol'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(45,1): warning C4626: 'Character': assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(9,21): warning C4820: 'Ash': '3' bytes padding added after data member 'Ash::player'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(19,1): warning C4626: 'Ash': assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(19,1): warning C5027: 'Ash': move assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Die.hpp(7,17): warning C4820: 'Die': '4' bytes padding added after data member 'Die::value'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C4820: 'Felix': '4' bytes padding added after data member 'Felix::count'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C4626: 'Felix': assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C5027: 'Felix': move assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C4820: 'Columna': '4' bytes padding added after data member 'Columna::x'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C4626: 'Columna': assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C5027: 'Columna': move assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\RetainBothBoardsPosition.hpp(19,1): warning C4626: 'RetainBothBoardsPosition': assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\RetainBothBoardsPosition.hpp(19,1): warning C5027: 'RetainBothBoardsPosition': move assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Oliver.hpp(19,1): warning C4626: 'Oliver': assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Oliver.hpp(19,1): warning C5027: 'Oliver': move assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(18,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character1Id'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(20,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::score1'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(23,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character2Id'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(70,1): warning C4820: 'Game': '3' bytes padding added after data member 'Game::turn'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(39,1): warning C4820: 'FileManager<Game,unsigned int>': '7' bytes padding added after data member 'FileManager<Game,unsigned int>::auto_inc'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(5,60): message : see reference to class template instantiation 'FileManager<Game,unsigned int>' being compiled
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(38,3): warning C4265: 'FileManager<Game,unsigned int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4625: 'GameManager': copy constructor was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C5026: 'GameManager': move constructor was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4626: 'GameManager': assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C5027: 'GameManager': move assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4265: 'GameManager': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\StorageSystem.hpp(14,1): warning C4625: 'StorageSystem': copy constructor was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\StorageSystem.hpp(14,1): warning C4626: 'StorageSystem': assignment operator was implicitly defined as deleted
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(43,1): warning C4820: 'GameView': '6' bytes padding added after data member 'GameView::usingAbility2'
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(13,44): warning C4244: '=': conversion from 'int' to 'char', possible loss of data
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(7,38): warning C4100: 'game': unreferenced formal parameter
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(27,44): warning C4244: '=': conversion from 'int' to 'char', possible loss of data
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(21,38): warning C4100: 'game': unreferenced formal parameter
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(45,44): warning C4244: '=': conversion from 'int' to 'char', possible loss of data
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(40,38): warning C4100: 'game': unreferenced formal parameter
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(103,38): warning C4101: 'ex': unreferenced local variable
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(187,72): warning C4388: '<': signed/unsigned mismatch
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(200,21): warning C4388: '<=': signed/unsigned mismatch
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(246,3): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(246,3): warning C4365: 'initializing': conversion from 'unsigned __int64' to 'int', signed/unsigned mismatch
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(248,27): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(259,42): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(16): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(9): message : index 'j' range checked by comparison on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(16): message : feeds call on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(48): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(41): message : index 'j' range checked by comparison on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(48): message : feeds call on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(13): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(13): message : index '' range checked by comparison on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(13): message : feeds call on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(45): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(45): message : index '' range checked by comparison on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(45): message : feeds call on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(30): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(23): message : index 'j' range checked by comparison on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(30): message : feeds call on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(27): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(27): message : index '' range checked by comparison on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(27): message : feeds call on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(92): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(90): message : index '' range checked by comparison on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(92): message : feeds call on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(189): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(187): message : index '' range checked by comparison on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(189): message : feeds call on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(248): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(246): message : index 'i' range checked by comparison on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(248): message : feeds call on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\VectorUtility.hpp(63): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\VectorUtility.hpp(62): message : index 'j' range checked by comparison on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\VectorUtility.hpp(63): message : feeds call on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\VectorUtility.hpp(62): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\VectorUtility.hpp(61): message : index '' range checked by comparison on this line
-D:\GitHubRepos\CourseProject\CourseProject\CourseProject\VectorUtility.hpp(62): message : feeds call on this line
-  CourseProject.vcxproj -> D:\GitHubRepos\CourseProject\CourseProject\x64\Debug\CourseProject.exe
+﻿  Game.cpp
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Serializable.hpp(7,1): warning C5204: 'Serializable': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1): warning C4820: 'Storable<unsigned int>': '4' bytes padding added after data member 'Storable<unsigned int>::id'
+  (compiling source file 'Game.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(6,23):
+  	see reference to class template instantiation 'Storable<unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(25,1): warning C4820: 'Board': '4' bytes padding added after data member 'Board::board'
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(25,1): warning C5204: 'Board': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winbase.h(7810,48): warning C5039: 'TpSetCallbackCleanupGroup': pointer or reference to potentially throwing function passed to 'extern "C"' function under -EHc. Undefined behavior may occur if this function throws an exception.
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10847,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10853,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10858,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10863,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10870,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10875,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10886,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10891,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10897,22): warning C4668: '_WIN32_WINNT_WIN10_RS3' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10905,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10909,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10913,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10918,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10921,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10970,23): warning C4668: 'NTDDI_WIN10_CU' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10974,23): warning C4668: 'NTDDI_WIN10_CU' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(11171,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(11195,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(14754,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(14956,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15059,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15155,21): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15259,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16004,23): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16092,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16218,22): warning C4668: '_WIN32_WINNT_WIN10_RS3' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16367,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16380,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16609,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Libraries\color.hpp(121,70): warning C4242: 'argument': conversion from 'int' to 'WORD', possible loss of data
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Libraries\color.hpp(121,70): warning C4365: 'argument': conversion from 'int' to 'WORD', signed/unsigned mismatch
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Point.hpp(14,1): warning C4820: 'Point': '3' bytes padding added after data member 'Point::board'
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Position.hpp(26,1): warning C4820: 'Position': '4' bytes padding added after data member 'Position::point'
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Selection.hpp(20,1): warning C4820: 'Selection': '4' bytes padding added after data member 'Selection::n'
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(27,22): warning C4820: 'Character': '7' bytes padding added after data member 'Character::symbol'
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(45,1): warning C4626: 'Character': assignment operator was implicitly defined as deleted
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Position.hpp(25,11): warning C5267: definition of implicit copy constructor for 'Position' is deprecated because it has a user-provided destructor
+  (compiling source file 'Game.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\BothBoardsPosition.hpp(7,54):
+  implicit copy constructor for 'Position' first required here
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(9,21): warning C4820: 'Ash': '3' bytes padding added after data member 'Ash::player'
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(19,1): warning C4626: 'Ash': assignment operator was implicitly defined as deleted
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(19,1): warning C5027: 'Ash': move assignment operator was implicitly defined as deleted
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Die.hpp(7,17): warning C4820: 'Die': '4' bytes padding added after data member 'Die::value'
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C4820: 'Felix': '4' bytes padding added after data member 'Felix::count'
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C4626: 'Felix': assignment operator was implicitly defined as deleted
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C5027: 'Felix': move assignment operator was implicitly defined as deleted
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C4820: 'Columna': '4' bytes padding added after data member 'Columna::x'
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C4626: 'Columna': assignment operator was implicitly defined as deleted
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C5027: 'Columna': move assignment operator was implicitly defined as deleted
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\RetainBothBoardsPosition.hpp(19,1): warning C4626: 'RetainBothBoardsPosition': assignment operator was implicitly defined as deleted
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\RetainBothBoardsPosition.hpp(19,1): warning C5027: 'RetainBothBoardsPosition': move assignment operator was implicitly defined as deleted
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Oliver.hpp(19,1): warning C4626: 'Oliver': assignment operator was implicitly defined as deleted
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Oliver.hpp(19,1): warning C5027: 'Oliver': move assignment operator was implicitly defined as deleted
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(18,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character1Id'
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(20,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::score1'
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(23,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character2Id'
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(70,1): warning C4820: 'Game': '3' bytes padding added after data member 'Game::turn'
+  (compiling source file 'Game.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(27,38): warning C4458: declaration of 'id' hides class member
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(10,9):
+  see declaration of 'Storable<unsigned int>::id'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(77,43): warning C5038: data member 'Game::turn' will be initialized after data member 'Game::score1'
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(77,63): warning C5038: data member 'Game::score2' will be initialized after data member 'Game::character1Id'
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(88,18): warning C5038: data member 'Game::player2' will be initialized after data member 'Game::board1'
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(88,61): warning C5038: data member 'Game::turn' will be initialized after base class 'Storable<unsigned int>'
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(89,43): warning C5038: data member 'Game::score2' will be initialized after data member 'Game::character1Id'
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(98,77): warning C5038: data member 'Game::player2' will be initialized after data member 'Game::board1'
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(99,45): warning C5038: data member 'Game::turn' will be initialized after data member 'Game::score1'
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(100,1): warning C5038: data member 'Game::score2' will be initialized after data member 'Game::character1Id'
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(100,57): warning C5038: data member 'Game::character2Id' will be initialized after data member 'Game::die'
+  GameManager.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\limits.h(70,5): warning C4668: '__STDC_WANT_SECURE_LIB__' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Serializable.hpp(7,1): warning C5204: 'Serializable': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1): warning C4820: 'Storable<unsigned int>': '4' bytes padding added after data member 'Storable<unsigned int>::id'
+  (compiling source file 'GameManager.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(6,23):
+  	see reference to class template instantiation 'Storable<unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(25,1): warning C4820: 'Board': '4' bytes padding added after data member 'Board::board'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(25,1): warning C5204: 'Board': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winbase.h(7810,48): warning C5039: 'TpSetCallbackCleanupGroup': pointer or reference to potentially throwing function passed to 'extern "C"' function under -EHc. Undefined behavior may occur if this function throws an exception.
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10847,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10853,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10858,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10863,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10870,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10875,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10886,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10891,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10897,22): warning C4668: '_WIN32_WINNT_WIN10_RS3' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10905,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10909,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10913,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10918,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10921,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10970,23): warning C4668: 'NTDDI_WIN10_CU' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10974,23): warning C4668: 'NTDDI_WIN10_CU' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(11171,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(11195,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(14754,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(14956,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15059,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15155,21): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15259,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16004,23): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16092,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16218,22): warning C4668: '_WIN32_WINNT_WIN10_RS3' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16367,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16380,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16609,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Libraries\color.hpp(121,70): warning C4242: 'argument': conversion from 'int' to 'WORD', possible loss of data
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Libraries\color.hpp(121,70): warning C4365: 'argument': conversion from 'int' to 'WORD', signed/unsigned mismatch
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Point.hpp(14,1): warning C4820: 'Point': '3' bytes padding added after data member 'Point::board'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Position.hpp(26,1): warning C4820: 'Position': '4' bytes padding added after data member 'Position::point'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Selection.hpp(20,1): warning C4820: 'Selection': '4' bytes padding added after data member 'Selection::n'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(27,22): warning C4820: 'Character': '7' bytes padding added after data member 'Character::symbol'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(45,1): warning C4626: 'Character': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Position.hpp(25,11): warning C5267: definition of implicit copy constructor for 'Position' is deprecated because it has a user-provided destructor
+  (compiling source file 'GameManager.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\BothBoardsPosition.hpp(7,54):
+  implicit copy constructor for 'Position' first required here
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(9,21): warning C4820: 'Ash': '3' bytes padding added after data member 'Ash::player'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(19,1): warning C4626: 'Ash': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(19,1): warning C5027: 'Ash': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Die.hpp(7,17): warning C4820: 'Die': '4' bytes padding added after data member 'Die::value'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C4820: 'Felix': '4' bytes padding added after data member 'Felix::count'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C4626: 'Felix': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C5027: 'Felix': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C4820: 'Columna': '4' bytes padding added after data member 'Columna::x'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C4626: 'Columna': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C5027: 'Columna': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\RetainBothBoardsPosition.hpp(19,1): warning C4626: 'RetainBothBoardsPosition': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\RetainBothBoardsPosition.hpp(19,1): warning C5027: 'RetainBothBoardsPosition': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Oliver.hpp(19,1): warning C4626: 'Oliver': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Oliver.hpp(19,1): warning C5027: 'Oliver': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(18,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character1Id'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(20,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::score1'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(23,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character2Id'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(70,1): warning C4820: 'Game': '3' bytes padding added after data member 'Game::turn'
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1): warning C4820: 'FileManager<Player,unsigned int>': '7' bytes padding added after data member 'FileManager<Player,unsigned int>::auto_inc'
+  (compiling source file 'GameManager.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(5,30):
+  	see reference to class template instantiation 'FileManager<Player,unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(122,3): warning C4265: 'FileManager<Player,unsigned int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4625: 'PlayerManager': copy constructor was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C5026: 'PlayerManager': move constructor was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4626: 'PlayerManager': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C5027: 'PlayerManager': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4265: 'PlayerManager': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1): warning C4820: 'FileManager<Game,unsigned int>': '7' bytes padding added after data member 'FileManager<Game,unsigned int>::auto_inc'
+  (compiling source file 'GameManager.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(5,28):
+  	see reference to class template instantiation 'FileManager<Game,unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(122,3): warning C4265: 'FileManager<Game,unsigned int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4625: 'GameManager': copy constructor was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C5026: 'GameManager': move constructor was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4626: 'GameManager': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C5027: 'GameManager': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4265: 'GameManager': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'GameManager.cpp')
+  
+  GameView.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\limits.h(70,5): warning C4668: '__STDC_WANT_SECURE_LIB__' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Serializable.hpp(7,1): warning C5204: 'Serializable': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1): warning C4820: 'Storable<unsigned int>': '4' bytes padding added after data member 'Storable<unsigned int>::id'
+  (compiling source file 'GameView.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(6,23):
+  	see reference to class template instantiation 'Storable<unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1): warning C4820: 'FileManager<Player,unsigned int>': '7' bytes padding added after data member 'FileManager<Player,unsigned int>::auto_inc'
+  (compiling source file 'GameView.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(5,30):
+  	see reference to class template instantiation 'FileManager<Player,unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(122,3): warning C4265: 'FileManager<Player,unsigned int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4625: 'PlayerManager': copy constructor was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C5026: 'PlayerManager': move constructor was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4626: 'PlayerManager': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C5027: 'PlayerManager': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4265: 'PlayerManager': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(25,1): warning C4820: 'Board': '4' bytes padding added after data member 'Board::board'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(25,1): warning C5204: 'Board': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winbase.h(7810,48): warning C5039: 'TpSetCallbackCleanupGroup': pointer or reference to potentially throwing function passed to 'extern "C"' function under -EHc. Undefined behavior may occur if this function throws an exception.
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10847,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10853,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10858,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10863,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10870,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10875,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10886,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10891,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10897,22): warning C4668: '_WIN32_WINNT_WIN10_RS3' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10905,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10909,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10913,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10918,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10921,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10970,23): warning C4668: 'NTDDI_WIN10_CU' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10974,23): warning C4668: 'NTDDI_WIN10_CU' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(11171,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(11195,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(14754,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(14956,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15059,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15155,21): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15259,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16004,23): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16092,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16218,22): warning C4668: '_WIN32_WINNT_WIN10_RS3' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16367,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16380,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16609,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Libraries\color.hpp(121,70): warning C4242: 'argument': conversion from 'int' to 'WORD', possible loss of data
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Libraries\color.hpp(121,70): warning C4365: 'argument': conversion from 'int' to 'WORD', signed/unsigned mismatch
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Point.hpp(14,1): warning C4820: 'Point': '3' bytes padding added after data member 'Point::board'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Position.hpp(26,1): warning C4820: 'Position': '4' bytes padding added after data member 'Position::point'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Selection.hpp(20,1): warning C4820: 'Selection': '4' bytes padding added after data member 'Selection::n'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(27,22): warning C4820: 'Character': '7' bytes padding added after data member 'Character::symbol'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(45,1): warning C4626: 'Character': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Position.hpp(25,11): warning C5267: definition of implicit copy constructor for 'Position' is deprecated because it has a user-provided destructor
+  (compiling source file 'GameView.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\BothBoardsPosition.hpp(7,54):
+  implicit copy constructor for 'Position' first required here
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(9,21): warning C4820: 'Ash': '3' bytes padding added after data member 'Ash::player'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(19,1): warning C4626: 'Ash': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(19,1): warning C5027: 'Ash': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Die.hpp(7,17): warning C4820: 'Die': '4' bytes padding added after data member 'Die::value'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C4820: 'Felix': '4' bytes padding added after data member 'Felix::count'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C4626: 'Felix': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C5027: 'Felix': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C4820: 'Columna': '4' bytes padding added after data member 'Columna::x'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C4626: 'Columna': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C5027: 'Columna': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\RetainBothBoardsPosition.hpp(19,1): warning C4626: 'RetainBothBoardsPosition': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\RetainBothBoardsPosition.hpp(19,1): warning C5027: 'RetainBothBoardsPosition': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Oliver.hpp(19,1): warning C4626: 'Oliver': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Oliver.hpp(19,1): warning C5027: 'Oliver': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(18,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character1Id'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(20,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::score1'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(23,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character2Id'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(70,1): warning C4820: 'Game': '3' bytes padding added after data member 'Game::turn'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1): warning C4820: 'FileManager<Game,unsigned int>': '7' bytes padding added after data member 'FileManager<Game,unsigned int>::auto_inc'
+  (compiling source file 'GameView.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(5,28):
+  	see reference to class template instantiation 'FileManager<Game,unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(122,3): warning C4265: 'FileManager<Game,unsigned int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4625: 'GameManager': copy constructor was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C5026: 'GameManager': move constructor was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4626: 'GameManager': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C5027: 'GameManager': move assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4265: 'GameManager': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\StorageSystem.hpp(14,1): warning C4625: 'StorageSystem': copy constructor was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\StorageSystem.hpp(14,1): warning C4626: 'StorageSystem': assignment operator was implicitly defined as deleted
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(43,1): warning C4820: 'GameView': '6' bytes padding added after data member 'GameView::usingAbility2'
+  (compiling source file 'GameView.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(13,14): warning C5038: data member 'GameView::storage' will be initialized after data member 'GameView::position'
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(34,45): warning C4458: declaration of 'game' hides class member
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(12,8):
+  see declaration of 'GameView::game'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(41,44): warning C4244: '=': conversion from 'int' to 'char', possible loss of data
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(50,45): warning C4458: declaration of 'game' hides class member
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(12,8):
+  see declaration of 'GameView::game'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(57,45): warning C4244: '=': conversion from 'int' to 'char', possible loss of data
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(73,45): warning C4458: declaration of 'game' hides class member
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(12,8):
+  see declaration of 'GameView::game'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(79,44): warning C4244: '=': conversion from 'int' to 'char', possible loss of data
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(89,41): warning C4458: declaration of 'game' hides class member
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(12,8):
+  see declaration of 'GameView::game'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(100,41): warning C4458: declaration of 'game' hides class member
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(12,8):
+  see declaration of 'GameView::game'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(108,38): warning C4458: declaration of 'game' hides class member
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(12,8):
+  see declaration of 'GameView::game'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(159,37): warning C4101: 'ex': unreferenced local variable
+  MainMenu.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\limits.h(70,5): warning C4668: '__STDC_WANT_SECURE_LIB__' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Serializable.hpp(7,1): warning C5204: 'Serializable': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1): warning C4820: 'Storable<unsigned int>': '4' bytes padding added after data member 'Storable<unsigned int>::id'
+  (compiling source file 'MainMenu.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(6,23):
+  	see reference to class template instantiation 'Storable<unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1): warning C4820: 'FileManager<Player,unsigned int>': '7' bytes padding added after data member 'FileManager<Player,unsigned int>::auto_inc'
+  (compiling source file 'MainMenu.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(5,30):
+  	see reference to class template instantiation 'FileManager<Player,unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(122,3): warning C4265: 'FileManager<Player,unsigned int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4625: 'PlayerManager': copy constructor was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C5026: 'PlayerManager': move constructor was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4626: 'PlayerManager': assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C5027: 'PlayerManager': move assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4265: 'PlayerManager': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(25,1): warning C4820: 'Board': '4' bytes padding added after data member 'Board::board'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(25,1): warning C5204: 'Board': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winbase.h(7810,48): warning C5039: 'TpSetCallbackCleanupGroup': pointer or reference to potentially throwing function passed to 'extern "C"' function under -EHc. Undefined behavior may occur if this function throws an exception.
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10847,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10853,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10858,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10863,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10870,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10875,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10886,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10891,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10897,22): warning C4668: '_WIN32_WINNT_WIN10_RS3' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10905,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10909,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10913,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10918,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10921,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10970,23): warning C4668: 'NTDDI_WIN10_CU' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10974,23): warning C4668: 'NTDDI_WIN10_CU' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(11171,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(11195,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(14754,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(14956,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15059,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15155,21): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15259,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16004,23): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16092,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16218,22): warning C4668: '_WIN32_WINNT_WIN10_RS3' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16367,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16380,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16609,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Libraries\color.hpp(121,70): warning C4242: 'argument': conversion from 'int' to 'WORD', possible loss of data
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Libraries\color.hpp(121,70): warning C4365: 'argument': conversion from 'int' to 'WORD', signed/unsigned mismatch
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Point.hpp(14,1): warning C4820: 'Point': '3' bytes padding added after data member 'Point::board'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Position.hpp(26,1): warning C4820: 'Position': '4' bytes padding added after data member 'Position::point'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Selection.hpp(20,1): warning C4820: 'Selection': '4' bytes padding added after data member 'Selection::n'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(27,22): warning C4820: 'Character': '7' bytes padding added after data member 'Character::symbol'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(45,1): warning C4626: 'Character': assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Position.hpp(25,11): warning C5267: definition of implicit copy constructor for 'Position' is deprecated because it has a user-provided destructor
+  (compiling source file 'MainMenu.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\BothBoardsPosition.hpp(7,54):
+  implicit copy constructor for 'Position' first required here
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(9,21): warning C4820: 'Ash': '3' bytes padding added after data member 'Ash::player'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(19,1): warning C4626: 'Ash': assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(19,1): warning C5027: 'Ash': move assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Die.hpp(7,17): warning C4820: 'Die': '4' bytes padding added after data member 'Die::value'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C4820: 'Felix': '4' bytes padding added after data member 'Felix::count'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C4626: 'Felix': assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C5027: 'Felix': move assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C4820: 'Columna': '4' bytes padding added after data member 'Columna::x'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C4626: 'Columna': assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C5027: 'Columna': move assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\RetainBothBoardsPosition.hpp(19,1): warning C4626: 'RetainBothBoardsPosition': assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\RetainBothBoardsPosition.hpp(19,1): warning C5027: 'RetainBothBoardsPosition': move assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Oliver.hpp(19,1): warning C4626: 'Oliver': assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Oliver.hpp(19,1): warning C5027: 'Oliver': move assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(18,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character1Id'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(20,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::score1'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(23,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character2Id'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(70,1): warning C4820: 'Game': '3' bytes padding added after data member 'Game::turn'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1): warning C4820: 'FileManager<Game,unsigned int>': '7' bytes padding added after data member 'FileManager<Game,unsigned int>::auto_inc'
+  (compiling source file 'MainMenu.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(5,28):
+  	see reference to class template instantiation 'FileManager<Game,unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(122,3): warning C4265: 'FileManager<Game,unsigned int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4625: 'GameManager': copy constructor was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C5026: 'GameManager': move constructor was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4626: 'GameManager': assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C5027: 'GameManager': move assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4265: 'GameManager': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\StorageSystem.hpp(14,1): warning C4625: 'StorageSystem': copy constructor was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\StorageSystem.hpp(14,1): warning C4626: 'StorageSystem': assignment operator was implicitly defined as deleted
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(43,1): warning C4820: 'GameView': '6' bytes padding added after data member 'GameView::usingAbility2'
+  (compiling source file 'MainMenu.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(13,44): warning C4244: '=': conversion from 'int' to 'char', possible loss of data
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(7,38): warning C4100: 'game': unreferenced formal parameter
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(27,44): warning C4244: '=': conversion from 'int' to 'char', possible loss of data
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(21,38): warning C4100: 'game': unreferenced formal parameter
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(45,44): warning C4244: '=': conversion from 'int' to 'char', possible loss of data
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(40,38): warning C4100: 'game': unreferenced formal parameter
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(103,38): warning C4101: 'ex': unreferenced local variable
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(16,11): warning C5267: definition of implicit assignment operator for 'Storable<unsigned int>' is deprecated because it has a user-provided destructor
+  (compiling source file 'MainMenu.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(21,1):
+  implicit assignment operator for 'Storable<unsigned int>' first required here
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(21,1):
+  This diagnostic occurred in the compiler generated function 'Player &Player::operator =(const Player &)'
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(100,10):
+  see reference to function 'Player &Player::operator =(const Player &)'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(179,72): warning C4388: '<': signed/unsigned mismatch
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(192,21): warning C4388: '<=': signed/unsigned mismatch
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(238,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(238,14): warning C4365: 'initializing': conversion from 'unsigned __int64' to 'int', signed/unsigned mismatch
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(240,26): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(251,39): warning C4365: 'argument': conversion from 'int' to 'const unsigned __int64', signed/unsigned mismatch
+  Player.cpp
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Serializable.hpp(7,1): warning C5204: 'Serializable': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+  (compiling source file 'Player.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1): warning C4820: 'Storable<unsigned int>': '4' bytes padding added after data member 'Storable<unsigned int>::id'
+  (compiling source file 'Player.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(6,23):
+  	see reference to class template instantiation 'Storable<unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(16,11): warning C5267: definition of implicit copy constructor for 'Storable<unsigned int>' is deprecated because it has a user-provided destructor
+  (compiling source file 'Player.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(21,1):
+  implicit copy constructor for 'Storable<unsigned int>' first required here
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(21,1):
+  This diagnostic occurred in the compiler generated function 'Player::Player(const Player &)'
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.cpp(24,22):
+  see reference to function 'Player::Player(const Player &)'
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.cpp(27,42): warning C4458: declaration of 'id' hides class member
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(10,9):
+  see declaration of 'Storable<unsigned int>::id'
+  
+  PlayerManager.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\limits.h(70,5): warning C4668: '__STDC_WANT_SECURE_LIB__' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'PlayerManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Serializable.hpp(7,1): warning C5204: 'Serializable': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+  (compiling source file 'PlayerManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1): warning C4820: 'Storable<unsigned int>': '4' bytes padding added after data member 'Storable<unsigned int>::id'
+  (compiling source file 'PlayerManager.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(6,23):
+  	see reference to class template instantiation 'Storable<unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1): warning C4820: 'FileManager<Player,unsigned int>': '7' bytes padding added after data member 'FileManager<Player,unsigned int>::auto_inc'
+  (compiling source file 'PlayerManager.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(5,30):
+  	see reference to class template instantiation 'FileManager<Player,unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(122,3): warning C4265: 'FileManager<Player,unsigned int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'PlayerManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4625: 'PlayerManager': copy constructor was implicitly defined as deleted
+  (compiling source file 'PlayerManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C5026: 'PlayerManager': move constructor was implicitly defined as deleted
+  (compiling source file 'PlayerManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4626: 'PlayerManager': assignment operator was implicitly defined as deleted
+  (compiling source file 'PlayerManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C5027: 'PlayerManager': move assignment operator was implicitly defined as deleted
+  (compiling source file 'PlayerManager.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4265: 'PlayerManager': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'PlayerManager.cpp')
+  
+  main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\limits.h(70,5): warning C4668: '__STDC_WANT_SECURE_LIB__' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Serializable.hpp(7,1): warning C5204: 'Serializable': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1): warning C4820: 'Storable<unsigned int>': '4' bytes padding added after data member 'Storable<unsigned int>::id'
+  (compiling source file 'main.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Storable.hpp(20,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.hpp(6,23):
+  	see reference to class template instantiation 'Storable<unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1): warning C4820: 'FileManager<Player,unsigned int>': '7' bytes padding added after data member 'FileManager<Player,unsigned int>::auto_inc'
+  (compiling source file 'main.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(5,30):
+  	see reference to class template instantiation 'FileManager<Player,unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(122,3): warning C4265: 'FileManager<Player,unsigned int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4625: 'PlayerManager': copy constructor was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C5026: 'PlayerManager': move constructor was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4626: 'PlayerManager': assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C5027: 'PlayerManager': move assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerManager.hpp(13,1): warning C4265: 'PlayerManager': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(25,1): warning C4820: 'Board': '4' bytes padding added after data member 'Board::board'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Board.hpp(25,1): warning C5204: 'Board': class has virtual functions, but its trivial destructor is not virtual; instances of objects derived from this class may not be destructed correctly
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winbase.h(7810,48): warning C5039: 'TpSetCallbackCleanupGroup': pointer or reference to potentially throwing function passed to 'extern "C"' function under -EHc. Undefined behavior may occur if this function throws an exception.
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10847,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10853,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10858,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10863,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10870,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10875,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10886,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10891,22): warning C4668: '_WIN32_WINNT_WIN10_TH2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10897,22): warning C4668: '_WIN32_WINNT_WIN10_RS3' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10905,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10909,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10913,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10918,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10921,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10970,23): warning C4668: 'NTDDI_WIN10_CU' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(10974,23): warning C4668: 'NTDDI_WIN10_CU' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(11171,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(11195,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(14754,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(14956,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15059,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15155,21): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(15259,22): warning C4668: '_WIN32_WINNT_WIN10_RS5' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16004,23): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16092,22): warning C4668: '_WIN32_WINNT_WIN10_RS2' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16218,22): warning C4668: '_WIN32_WINNT_WIN10_RS3' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16367,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16380,22): warning C4668: '_WIN32_WINNT_WIN10_RS4' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winioctl.h(16609,22): warning C4668: '_WIN32_WINNT_WIN10_RS1' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Libraries\color.hpp(121,70): warning C4242: 'argument': conversion from 'int' to 'WORD', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Libraries\color.hpp(121,70): warning C4365: 'argument': conversion from 'int' to 'WORD', signed/unsigned mismatch
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Point.hpp(14,1): warning C4820: 'Point': '3' bytes padding added after data member 'Point::board'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Position.hpp(26,1): warning C4820: 'Position': '4' bytes padding added after data member 'Position::point'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Selection.hpp(20,1): warning C4820: 'Selection': '4' bytes padding added after data member 'Selection::n'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(27,22): warning C4820: 'Character': '7' bytes padding added after data member 'Character::symbol'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Character.hpp(45,1): warning C4626: 'Character': assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Position.hpp(25,11): warning C5267: definition of implicit copy constructor for 'Position' is deprecated because it has a user-provided destructor
+  (compiling source file 'main.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\BothBoardsPosition.hpp(7,54):
+  implicit copy constructor for 'Position' first required here
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(9,21): warning C4820: 'Ash': '3' bytes padding added after data member 'Ash::player'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(19,1): warning C4626: 'Ash': assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Ash.hpp(19,1): warning C5027: 'Ash': move assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Die.hpp(7,17): warning C4820: 'Die': '4' bytes padding added after data member 'Die::value'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C4820: 'Felix': '4' bytes padding added after data member 'Felix::count'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C4626: 'Felix': assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Felix.hpp(15,1): warning C5027: 'Felix': move assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C4820: 'Columna': '4' bytes padding added after data member 'Columna::x'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C4626: 'Columna': assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Columna.hpp(19,1): warning C5027: 'Columna': move assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\RetainBothBoardsPosition.hpp(19,1): warning C4626: 'RetainBothBoardsPosition': assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\RetainBothBoardsPosition.hpp(19,1): warning C5027: 'RetainBothBoardsPosition': move assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Oliver.hpp(19,1): warning C4626: 'Oliver': assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Oliver.hpp(19,1): warning C5027: 'Oliver': move assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(18,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character1Id'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(20,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::score1'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(23,23): warning C4820: 'Game': '4' bytes padding added after data member 'Game::character2Id'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.hpp(70,1): warning C4820: 'Game': '3' bytes padding added after data member 'Game::turn'
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1): warning C4820: 'FileManager<Game,unsigned int>': '7' bytes padding added after data member 'FileManager<Game,unsigned int>::auto_inc'
+  (compiling source file 'main.cpp')
+  C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(123,1):
+  the template instantiation context (the oldest one first) is
+  	C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(5,28):
+  	see reference to class template instantiation 'FileManager<Game,unsigned int>' being compiled
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\FileManager.hpp(122,3): warning C4265: 'FileManager<Game,unsigned int>': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4625: 'GameManager': copy constructor was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C5026: 'GameManager': move constructor was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4626: 'GameManager': assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C5027: 'GameManager': move assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.hpp(17,1): warning C4265: 'GameManager': class has virtual functions, but its non-trivial destructor is not virtual; instances of this class may not be destructed correctly
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\StorageSystem.hpp(14,1): warning C4625: 'StorageSystem': copy constructor was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\StorageSystem.hpp(14,1): warning C4626: 'StorageSystem': assignment operator was implicitly defined as deleted
+  (compiling source file 'main.cpp')
+  
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.hpp(43,1): warning C4820: 'GameView': '6' bytes padding added after data member 'GameView::usingAbility2'
+  (compiling source file 'main.cpp')
+  
+  Generating Code...
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.cpp(19): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.cpp(19): message : index '' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.cpp(19): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(48): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(41): message : index 'j' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(48): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(45): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(45): message : index '' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(45): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(16): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(9): message : index 'j' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(16): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(30): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(23): message : index 'j' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(30): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(27): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(27): message : index '' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(27): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(13): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(13): message : index '' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(13): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(92): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(90): message : index '' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(92): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(240): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(238): message : index 'i' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(240): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(181): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(179): message : index '' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp(181): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\VectorUtility.hpp(63): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\VectorUtility.hpp(62): message : index 'j' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\VectorUtility.hpp(63): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\VectorUtility.hpp(62): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\VectorUtility.hpp(61): message : index '' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\VectorUtility.hpp(62): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(44): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(36): message : index 'j' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(44): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(41): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(41): message : index '' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(41): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(82): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(74): message : index 'j' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(82): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(79): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(79): message : index '' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(79): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(60): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(52): message : index 'j' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(60): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(57): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(57): message : index '' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp(57): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(50): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(48): message : index 'i' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(50): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(49): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(48): message : index 'i' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(49): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(43): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(41): message : index 'i' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(43): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(42): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(41): message : index 'i' range checked by comparison on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(42): message : feeds call on this line
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp(161): warning C4172: returning address of local variable or temporary
+  CourseProject.vcxproj -> C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\x64\Debug\CourseProject.exe

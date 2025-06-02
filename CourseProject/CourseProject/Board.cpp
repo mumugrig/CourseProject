@@ -100,7 +100,10 @@ void Board::clearValue(int x, int y)
 
 int Board::getValue(int x, int y) const
 {
-	return board[y][x];
+	if (inBounds(x, y)) {
+		return board[y][x];
+	}
+	else throw std::runtime_error("invalid position");
 }
 
 void Board::serialize(std::ostream& out) const

@@ -140,9 +140,6 @@
     <ClInclude Include="Storable.hpp">
       <Filter>Header Files\Storage</Filter>
     </ClInclude>
-    <ClInclude Include="Serializable.hpp">
-      <Filter>Header Files\Storage</Filter>
-    </ClInclude>
     <ClInclude Include="StorageSystem.hpp">
       <Filter>Header Files\Storage</Filter>
     </ClInclude>

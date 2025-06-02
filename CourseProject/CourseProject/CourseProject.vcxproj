@@ -180,7 +180,6 @@
     <ClInclude Include="Position.hpp" />
     <ClInclude Include="RetainBothBoardsPosition.hpp" />
     <ClInclude Include="Selection.hpp" />
-    <ClInclude Include="Serializable.hpp" />
     <ClInclude Include="Storable.hpp" />
     <ClInclude Include="StorageSystem.hpp" />
     <ClInclude Include="VectorUtility.hpp" />
