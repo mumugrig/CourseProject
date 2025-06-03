@@ -1,11 +1,6 @@
 ﻿#include "VectorUtility.hpp"
 #include "MainMenu.hpp"
 
-#if 1
-
-
-
-
 int main() {
 	StorageSystem files;
 	Player player1("null");
@@ -19,4 +14,3 @@ int main() {
 	files.games().save();
 }
 
-#endif

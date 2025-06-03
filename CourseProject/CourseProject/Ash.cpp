@@ -7,7 +7,7 @@ void Ash::initializeParameters()
 
 Ash::Ash(Board& player1Board, Board& player2Board, Character*& enemyCharacter, bool player) : Character(
 	"Ash",
-	"Destroy one die from any board.", 4, 1, dye::red_on_black<std::string>, hue::black_on_light_red, 'X'), target({0,0,0}), player1Board(player1Board), player2Board(player2Board), opponentCharacter(enemyCharacter), player(player) {}
+	"Destroy one die from either board.", 4, 1, dye::red_on_black<std::string>, hue::black_on_light_red, 'X'), target({0,0,0}), player1Board(player1Board), player2Board(player2Board), opponentCharacter(enemyCharacter), player(player) {}
 
  BothBoardsPosition* Ash::moveType(const Position* position) const {
 	return new BothBoardsPosition(*position);

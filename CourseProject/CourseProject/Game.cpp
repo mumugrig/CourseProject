@@ -69,7 +69,7 @@ void Game::initializeCharacter2(CharacterEnum character)
     case ASH: character2 = new Ash(board1, board2, character1, 1); break;
     case FELIX: character2 = new Felix(die); break;
     case COLUMNA: character2 = new Columna(board1); break; 
-    case OLIVER: character1 = new Oliver(board1, board2); break;
+    case OLIVER: character2 = new Oliver(board1, board2); break;
     }
 }
 
@@ -158,7 +158,6 @@ int Game::getPlayer2Score() const
 
 const std::string& Game::getWinnerUsername() const
 {
-    if (score1 == score2) return "Draw";
     return score1 > score2 ? player1.getUsername() : player2.getUsername();
 }
 
@@ -186,6 +185,10 @@ void Game::resetCharacterParameters()
 const Character& Game::getCurrentCharacter() const
 {
     return (turn ? getPlayer2Character() : getPlayer1Character());
+}
+const Character& Game::getOpponentCharacter() const
+{
+    return (turn ? getPlayer1Character() : getPlayer2Character());
 }
 
 const Board& Game::getCurrentBoard() const

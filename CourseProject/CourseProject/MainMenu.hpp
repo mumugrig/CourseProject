@@ -100,7 +100,10 @@ class MainMenu {
 	 * @param player2 Second player.
 	 */
 	static void loadGame(StorageSystem& files, const Player& player1, const Player& player2);
-
+	/**
+	* @brief Displays the rules of the game.
+	*/
+	static void printRules();
 public:
 	/**
 	 * @brief Prompts the user to choose two players by username.

@@ -12,7 +12,7 @@ void Oliver::initializeParameters() {
 	}
 }
 
-Oliver::Oliver(Board& player1Board, Board& player2Board) : Character("Oliver", "Swap two dice", 4, 2, dye::light_purple<std::string>, hue::bright_white_on_light_purple, ':'),
+Oliver::Oliver(Board& player1Board, Board& player2Board) : Character("Oliver", "Swap two dice. Has to target squares with a placed die on them", 4, 2, dye::light_purple<std::string>, hue::bright_white_on_light_purple, ':'),
 player1Board(player1Board), player2Board(player2Board) {}
 
 void Oliver::ability() {

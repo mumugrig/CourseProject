@@ -10,7 +10,6 @@ C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Game.cpp;C
 C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameManager.cpp;C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\x64\Debug\GameManager.obj
 C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\GameView.cpp;C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\x64\Debug\GameView.obj
 C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\libraries\pcg_basic.c;C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\x64\Debug\pcg_basic.obj
-C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\main.cpp;C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\x64\Debug\main.obj
 C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\MainMenu.cpp;C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\x64\Debug\MainMenu.obj
 C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Oliver.cpp;C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\x64\Debug\Oliver.obj
 C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Player.cpp;C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\x64\Debug\Player.obj
@@ -18,3 +17,4 @@ C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\PlayerMana
 C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Position.cpp;C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\x64\Debug\Position.obj
 C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\RetainBothBoardsPosition.cpp;C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\x64\Debug\RetainBothBoardsPosition.obj
 C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\Selection.cpp;C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\x64\Debug\Selection.obj
+C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\test.cpp;C:\Stuff\C++\UniGithubRepos\CourseProject\CourseProject\CourseProject\x64\Debug\test.obj

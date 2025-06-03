@@ -107,9 +107,9 @@ void GameView::printPlayer2() {
 }
 void GameView::printGame() {
 	system("cls");
-	printPlayer1(game);
+	printPlayer1();
 	std::cout << std::endl << std::endl;
-	printPlayer2(game);
+	printPlayer2();
 	std::cout << std::endl;
 	std::cout << (game.getTurn() ? game.getPlayer2Username() : game.getPlayer1Username())
 		<< "\'s turn." << std::endl;
@@ -138,6 +138,14 @@ void GameView::startGame() {
 			storage.games().save();
 			std::cout << "Game has been saved." << std::endl;
 			return;
+		}
+		if (keyPressed('H')) {
+			std::cout << game.getCurrentCharacter().getName() << " Ability: " << game.getCurrentCharacter().getDescription() << std::endl;
+			system("pause");
+		}
+		if (keyPressed('J')) {
+			std::cout << game.getCurrentCharacter().getName() << " Ability: " << game.getOpponentCharacter().getDescription() << std::endl;
+			system("pause");
 		}
 		if (keyPressed(VK_SHIFT)) {
 			try {
@@ -178,6 +186,6 @@ void GameView::startGame() {
 		}
 		Sleep(50);
 	}
-	printGame(game);
+	printGame();
 	std::cout << game.getWinnerUsername() << " won the game!" << std::endl;
 }

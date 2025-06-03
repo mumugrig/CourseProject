@@ -149,9 +149,14 @@ public:
 	 */
 	const Character& getCurrentCharacter() const;
 	/**
-	 * @brief Gets the board of the player whose turn it is.
-	 * @return Reference to the active player's board.
-	 */
+	* @brief Gets the character of character whose turn it isn't
+	* @return Reference to the opponent character
+	*/
+	const Character& getOpponentCharacter() const;
+	/**
+	* @brief Gets the board of the player whose turn it is.
+	* @return Reference to the active player's board.
+	*/
 	const Board& getCurrentBoard() const;
 	/**
 	 * @brief Triggers the ability of the current player's character and updates scores.
